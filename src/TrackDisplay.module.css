@@ -1,0 +1,30 @@
+.beat {
+    min-width: 25px;
+    min-height: 25px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    padding: 0px;
+    margin: 0px;
+    gap: 0px;
+    flex-grow: 1;
+}
+
+.track {
+    padding: 0px;
+    margin: 0px;
+    min-width: 50px;
+    min-height: 25px;
+    background-color: #dddddd;
+    position: relative;
+    &[data-shaded=true] {
+        background-color: whitesmoke;
+
+        &[data-vibe=true] {
+            background-color: rgb(255, 255, 202);
+        }
+    }
+    &[data-vibe=true] {
+        background-color: rgb(255, 255, 128);
+    }
+}

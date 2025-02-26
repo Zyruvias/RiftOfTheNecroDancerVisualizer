@@ -13,8 +13,16 @@ const getVibePowerValues = async () => {
         return {}
     }
 }
+export type VibeLength = "Single" | "Double" | "Triple"
 
-export const getVibePathForTrackAndDifficulty = (data: Array<any>, track, difficulty) => {
+export type Vibe = {
+    bars: VibeLength,
+    beat: number,
+    combo: number,
+    enemies: number,
+}
+
+export const getVibePathForTrackAndDifficulty = (data: Array<any>, track, difficulty): Vibe[] => {
 
     if (!data) {
         return []
@@ -30,17 +38,17 @@ export const getVibePathForTrackAndDifficulty = (data: Array<any>, track, diffic
         console.error(`Error: could not find track: ${track.label} (${track.value}) in vibe power data`)
     }
 
-    const vibeActivations = []
+    const vibeActivations: Vibe[] = []
 
     // TODO: generalization for arbitrary number of vibes
     for (let i = 1; i <= 10; i++) {
-        if (row[`Vibe ${i} - Bars`] === undefined) {
+        if (!row[`Vibe ${i} - Bars`]) {
             continue
         }
         const bars = row[`Vibe ${i} - Bars`]
-        const beat = parseInt(row[`Vibe ${i} - Beat`].substring(1)) // B215 -> 215
-        const combo = row[`Vibe ${i} - Combo`]
-        const enemies = row[`Vibe ${i} - Enemies`]
+        const beat = Number(row[`Vibe ${i} - Beat`].substring(1)) // B215 -> 215
+        const combo = Number(row[`Vibe ${i} - Combo`])
+        const enemies = Number(row[`Vibe ${i} - Enemies`])
 
         vibeActivations.push({
             bars,

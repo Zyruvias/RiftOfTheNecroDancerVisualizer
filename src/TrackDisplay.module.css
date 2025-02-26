@@ -17,14 +17,12 @@
     min-height: 25px;
     background-color: #dddddd;
     position: relative;
+    background-position: right;
+    background-repeat: no-repeat;
+    &[data-vibe=true] {
+        background-image: linear-gradient(to left, rgba(255,255,0,0.3) 100%, transparent 100%);
+    }
     &[data-shaded=true] {
         background-color: whitesmoke;
-
-        &[data-vibe=true] {
-            background-color: rgb(255, 255, 202);
-        }
-    }
-    &[data-vibe=true] {
-        background-color: rgb(255, 255, 128);
     }
 }

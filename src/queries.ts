@@ -42,7 +42,7 @@ export const getVibePathForTrackAndDifficulty = (data: Array<any>, track, diffic
 
     // TODO: generalization for arbitrary number of vibes
     for (let i = 1; i <= 10; i++) {
-        if (!row[`Vibe ${i} - Bars`]) {
+        if (!row?.[`Vibe ${i} - Bars`]) {
             continue
         }
         const bars = row[`Vibe ${i} - Bars`]

@@ -57,7 +57,7 @@ export const getTrackBeatMap = async (track, difficulty) => {
     const beatmapName = track.value.replace(/'|_|\s+/g, "")
     
     try {
-        const data =  await fetch(`/data/HitMaps/all_${difficulty.label.toLowerCase()}/RR${beatmapName}.txt`)
+        const data =  await fetch(`data/HitMaps/all_${difficulty.label.toLowerCase()}/RR${beatmapName}.txt?url`)
         return await data.text()
     } catch (e) {
         console.error(track, difficulty, e)

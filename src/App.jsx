@@ -76,7 +76,7 @@ function App() {
             />
           </div>
           <Credits />
-          <Anchor component={Button} href> Feedback</Anchor>
+          <Anchor component={Button} href={"https://github.com/Zyruvias/RiftOfTheNecroDancerVisualizer/issues/new"}> Feedback</Anchor>
         </Group>
       </Center>
       <TrackDisplay

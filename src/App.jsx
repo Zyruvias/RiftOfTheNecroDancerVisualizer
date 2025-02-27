@@ -1,5 +1,4 @@
 import { Anchor, Button, Center, Group, Select } from "@mantine/core";
-import "./App.css";
 import "@mantine/core/styles.css";
 import { TRACK_LIST, getTrack, getTrackBeatMap } from "../data/Charts";
 import { useEffect, useState } from "react";

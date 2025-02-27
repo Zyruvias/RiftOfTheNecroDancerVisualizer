@@ -19,21 +19,23 @@ import type { Vibe } from "./queries"
             "clipin": 0,
             "track": 2
 */
-type Beat = {
+export type VibeWindow = "START" | "FULL" | "END" | "NONE"
+export type Beat = {
     startBeat: number
     vibePowerDrain: number
     tracks: Array<any>
     bpm: number
-    vibeActive: boolean
+    vibeDurationType: VibeWindow
+    vibeOffset?: number
     vibe?: Vibe
 }
 
-const generateBeat = ({ bpm, startBeat }): Beat => {
+const generateBeat = ({ bpm, startBeat, ...rest }): Partial<Beat> => {
     return {
+        ...rest,
         startBeat,
         bpm,
         vibePowerDrain: 1 / 5 / 60 * bpm,
-        vibeActive: false,
         tracks: [
             [],
             [],
@@ -65,8 +67,10 @@ export const processTrackData2 = (trackData, beatMapData, vibePowerData: Vibe[])
     let currentVibeIndex = 0
     let monsterHitCount = 0
 
+    let vibePowerActive = false
+
     for (const line of restLines) {
-        if (line === "VCS") {
+        if (line === "VCS" || line === "") {
             continue // TODO: figure out how best to display vibe path enemies
         }
         const [beat, track, time] = line.split(/,\s*/)
@@ -77,23 +81,43 @@ export const processTrackData2 = (trackData, beatMapData, vibePowerData: Vibe[])
                 bpm: currentBPM,
             })
         const currentVibe = vibePowerData[currentVibeIndex] ?? {}
-        console.log(currentVibe)
 
         // current hits between start combo and vibe enemy expectation sum
-        const isVibeActive = currentVibe && (currentVibe.combo + currentVibe.enemies < monsterHitCount &&
-            monsterHitCount >= currentVibe.combo)
+        vibePowerActive = currentVibe.combo + currentVibe.enemies < monsterHitCount ||
+            monsterHitCount >= currentVibe.combo
+        // vibe power is activated BEFORE the next hit
+        if (vibePowerActive) {
+            currentBeat.vibe = currentVibe
+            // first hit, assign "START"
+            if (monsterHitCount === currentVibe.combo) {
+                currentBeat.vibeDurationType = "START"
+                currentBeat.vibeOffset = beat - flooredBeatNumber
+            } else if (currentBeat.vibeDurationType === undefined) {
+                // if we don't have a type it means we are on a new beat
+                // so we assign "FULL"
+                currentBeat.vibeDurationType = "FULL"
+            }
+        } else {
+
+        }
+
+        // assume we hit the monster. HIT THE MONSTER
+        currentBeat.tracks?.[track]?.push({
+            partialBeatOffset: beat - flooredBeatNumber,
+            isVibeActive: vibePowerActive,
+        })
+        monsterHitCount += 1
+        // post-hit processing, denote end of vibe path
+        if (monsterHitCount === currentVibe.combo + currentVibe.enemies) {
+            currentBeat.vibeDurationType = "END"
+            currentBeat.vibe = currentVibe
+            currentBeat.vibeOffset = beat - flooredBeatNumber
+        }
+
         // past relevant combo for vibe, go next
         if (monsterHitCount > currentVibe.combo + currentVibe.enemies) {
             currentVibeIndex += 1
         }
-        
-        const enemy = {
-            partialBeatOffset: beat - flooredBeatNumber,
-            isVibeActive,
-        }
-
-        currentBeat.tracks?.[track]?.push(enemy)
-        monsterHitCount += 1
 
 
         beats[flooredBeatNumber] = currentBeat
@@ -104,36 +128,13 @@ export const processTrackData2 = (trackData, beatMapData, vibePowerData: Vibe[])
             continue
         }
         // presume well-formed beats up to this point
-        beats[i] = generateBeat({ startBeat: i, bpm: beats[i - 1]?.bpm ?? currentBPM })
+        const vibeDurationType = ["START", "FULL"].includes(beats[i - 1]?.vibeDurationType) ? "FULL" : "NONE"
+        beats[i] = generateBeat({
+            startBeat: i,
+            bpm: beats[i - 1]?.bpm ?? currentBPM,
+            vibeDurationType,
+        })
     }
-
-    const barsMap = {
-        Single: 5,
-        Double: 10,
-        Triple: 15,
-    }
-
-    for (const vibe of vibePowerData) {
-        const beatStart = Math.ceil(vibe.beat)
-        if (!beatStart) { // early vibe phrases delayed
-            continue
-        } 
-        // TODO: granularize by enemy since activation is specific to enemies
-        const secondsOfVibePower = barsMap[vibe.bars] ?? barsMap.Single
-        const endBeat = beatStart + Math.ceil(secondsOfVibePower / vibePowerDrain)
-
-        // flooring the beat will give us a reference to the partial activation period
-        beats[Math.floor(vibe.beat) - 1].vibe = vibe
-
-        for (let i = beatStart - 1; i < endBeat; i++) {
-            if (beats[i]) {
-
-                beats[i].vibeActive = true
-                beats[i].vibe = vibe
-            }
-        }
-    }
-
 
     return beats
 

@@ -1,11 +1,12 @@
 import React, { useMemo, useRef } from "react"
-import { Button, Group, Collapse, Box, Stack, AccordionChevron } from '@mantine/core';
+import { Button, Group, Collapse, Box, Stack, AccordionChevron, Code, Center } from '@mantine/core';
 import { processTrackData, processTrackData2 } from "./utils"
 import { useDisclosure } from '@mantine/hooks';
 import classes from "./TrackDisplay.module.css"
+import type { VibeWindow, Beat as BeatProps } from "./utils";
 
 
-const Expand = ({ children, title }) => {
+const Expand = ({ children, title, boxStyle }) => {
   const [opened, { toggle }] = useDisclosure(false);
 
   return (
@@ -13,13 +14,13 @@ const Expand = ({ children, title }) => {
       <Group justify="center" mb={5} p={5}>
         <Button
             onClick={toggle}
-            rightSection={<AccordionChevron className={classes.chevron}/>}
+            rightSection={<AccordionChevron/>}
         >
             {title}
         </Button>
       </Group>
 
-      <Collapse in={opened}>
+      <Collapse in={opened} style={boxStyle}>
         {children}
       </Collapse>
     </Box>
@@ -27,11 +28,18 @@ const Expand = ({ children, title }) => {
 }
 
 export const Hit = ({
-    offset
+    offset,
+    enemy
 }) => {
     return <div style={{
         position: "absolute",
-        backgroundColor: "blue",
+        ...(enemy.isVibeActive ? {
+            backgroundColor: "orange",
+            borderWidth: "1px"
+        } : {
+            backgroundColor: "blue",
+        }),
+
         borderRadius: "50%",
         minWidth: "5px",
         minHeight: "5px",
@@ -47,37 +55,36 @@ export const Hit = ({
 export const Beat = ({
     startBeat,
     tracks,
-    vibeActive,
+    vibeDurationType,
     vibe,
-}: Partial<typeof Beat>) => {
-    let vibeOffset
-    let realBeat = startBeat + 1
-    if (vibe?.beat > realBeat && vibe.beat - realBeat < 1) {
-        vibeOffset = vibe.beat - realBeat
-    }
-
-    const stackRef = useRef(null)
-    if (vibe?.beat && startBeat < vibe.beat) {
-        console.log(stackRef)
+    vibeOffset,
+}: Partial<BeatProps>) => {
+    let finalVibeOffset
+    if (vibeOffset) {
+        // eliminates 0
+        finalVibeOffset = vibeOffset
+        if (vibeDurationType === "START" ) {
+            finalVibeOffset = 1 - vibeOffset
+        }
     }
     const yellow = "rgba(255, 255, 0, 0.25)"
-    return <Stack ref={stackRef} className={classes.beat} mod={{ offset: vibeOffset }}>
-        <Group className={classes.track} mod={{ shaded: startBeat % 2 === 0, vibe: vibeActive}}>
-            {tracks[0].map((e) => <Hit offset={e.partialBeatOffset} />)}
+    return <Stack className={classes.beat} mod={{ offset: vibeOffset }}>
+        <Group className={classes.track} mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}>
+            {tracks[0].map((e) => <Hit enemy={e} offset={e.partialBeatOffset} />)}
         </Group>
-        <Group className={classes.track} mod={{ shaded: startBeat % 2 !== 0, vibe: vibeActive}}>
-            {tracks[1].map((e) => <Hit offset={e.partialBeatOffset} />)}
+        <Group className={classes.track} mod={{ shaded: startBeat % 2 !== 0, vibe: vibeDurationType === "FULL"}}>
+            {tracks[1].map((e) => <Hit enemy={e} offset={e.partialBeatOffset} />)}
         </Group>
-        <Group className={classes.track} mod={{ shaded: startBeat % 2 === 0, vibe: vibeActive}}>
-            {tracks[2].map((e) => <Hit offset={e.partialBeatOffset} />)}
+        <Group className={classes.track} mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}>
+            {tracks[2].map((e) => <Hit enemy={e} offset={e.partialBeatOffset} />)}
         </Group>
-        {vibeOffset && <div ref={stackRef} style={{
+        {["START", "END"].includes(vibeDurationType) && <div style={{
             position: "absolute",
             minWidth: "50px",
             minHeight: "75px",
             backgroundImage: `linear-gradient(to left, ${yellow} 100%, transparent 100%)`,
-            backgroundSize: `${Math.round(vibeOffset * 100)}%`,
-            backgroundPosition: "right",
+            backgroundSize: `${Math.round(finalVibeOffset * 100)}%`,
+            backgroundPosition: vibeDurationType === "START" ? "right" : "left",
             backgroundRepeat: "no-repeat",
             flexGrow: 1,
             zIndex: 1.5,
@@ -92,18 +99,24 @@ export const TrackDisplay = ({
 }) => {
 
 
-    const processedTrackData = useMemo(() => processTrackData(trackData, beatData), [trackData, beatData])
     const processedTrackData2 = useMemo(() => processTrackData2(trackData, beatData, vibeData), [trackData, beatData, vibeData])
 
     return (
         <>
-            <Expand title={"Track Data (original"}>
-                <Group gap={0}>
-                    {JSON.stringify(trackData)}
-                </Group>
+            <Expand title={"Track Data (original"} boxStyle={{ overflowY: "scroll", maxHeight: "40vh", maxWidth: "40vw", margin: "auto auto"}}>
+                <Center>
+                    <Group align="top">
+                        <Code block>
+                            {beatData}
+                        </Code>
+                        <Code block>
+                            {JSON.stringify(trackData, null, 2)}
+                        </Code>
+                    </Group>
+                </Center>
             </Expand>
             <Expand title={"Processed Track Data"}>
-                <Group gap={0}>
+                <Group gap={0} className={classes.content}>
                     {processedTrackData2?.map((beat, i) =>  <Beat key={i} {...beat} />)}
                 </Group>
             </Expand>

@@ -1,6 +1,6 @@
 import { Anchor, Button, Center, Group, Select } from "@mantine/core";
 import "@mantine/core/styles.css";
-import { TRACK_LIST, getTrack, getTrackBeatMap } from "../data/Charts";
+import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data/Charts";
 import { useEffect, useState } from "react";
 import { TrackDisplay } from "./TrackDisplay";
 import { getVibePathForTrackAndDifficulty, useVibePowerPaths } from "./queries";

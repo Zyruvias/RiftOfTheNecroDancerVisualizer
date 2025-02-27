@@ -1,0 +1,4163 @@
+{
+    "bpm": 139,
+    "beatDivisions": 2,
+    "events": [
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 0.0,
+            "endBeatNumber": 1.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 2.0,
+            "endBeatNumber": 3.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 4.0,
+            "endBeatNumber": 5.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 6.0,
+            "endBeatNumber": 7.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 8.0,
+            "endBeatNumber": 9.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 10.0,
+            "endBeatNumber": 11.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 12.0,
+            "endBeatNumber": 13.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 14.0,
+            "endBeatNumber": 15.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 16.0,
+            "endBeatNumber": 17.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 18.0,
+            "endBeatNumber": 19.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 21.0,
+            "endBeatNumber": 24.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 23.0,
+            "endBeatNumber": 25.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "false"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 25.0,
+            "endBeatNumber": 28.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 28.0,
+            "endBeatNumber": 29.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 28.0,
+            "endBeatNumber": 29.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 28.0,
+            "endBeatNumber": 29.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 30.0,
+            "endBeatNumber": 33.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 34.0,
+            "endBeatNumber": 37.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 38.0,
+            "endBeatNumber": 41.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 42.0,
+            "endBeatNumber": 45.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 46.0,
+            "endBeatNumber": 49.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 50.0,
+            "endBeatNumber": 53.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 53.0,
+            "endBeatNumber": 56.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 55.0,
+            "endBeatNumber": 57.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "false"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 57.0,
+            "endBeatNumber": 60.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 60.0,
+            "endBeatNumber": 61.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 60.0,
+            "endBeatNumber": 61.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 60.0,
+            "endBeatNumber": 61.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 0,
+            "startBeatNumber": 61.5,
+            "endBeatNumber": 68.5,
+            "clipin": 0.0,
+            "type": "StartVibeChain",
+            "audioEvents": [],
+            "dataPairs": []
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 62.0,
+            "endBeatNumber": 63.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 64.0,
+            "endBeatNumber": 65.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 65.0,
+            "endBeatNumber": 67.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 67.0,
+            "endBeatNumber": 68.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 68.0,
+            "endBeatNumber": 69.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 70.0,
+            "endBeatNumber": 73.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 73.0,
+            "endBeatNumber": 76.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "false"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 76.0,
+            "endBeatNumber": 77.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "7358"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 78.0,
+            "endBeatNumber": 79.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 80.0,
+            "endBeatNumber": 81.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 81.0,
+            "endBeatNumber": 83.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 83.0,
+            "endBeatNumber": 84.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 85.0,
+            "endBeatNumber": 88.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 87.0,
+            "endBeatNumber": 89.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "false"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 89.0,
+            "endBeatNumber": 92.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 92.0,
+            "endBeatNumber": 93.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 92.0,
+            "endBeatNumber": 93.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 92.0,
+            "endBeatNumber": 93.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 94.0,
+            "endBeatNumber": 95.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 96.0,
+            "endBeatNumber": 97.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 97.0,
+            "endBeatNumber": 99.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 99.0,
+            "endBeatNumber": 100.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 100.0,
+            "endBeatNumber": 101.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 102.0,
+            "endBeatNumber": 105.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 105.0,
+            "endBeatNumber": 108.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "false"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 108.0,
+            "endBeatNumber": 109.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 110.0,
+            "endBeatNumber": 111.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 112.0,
+            "endBeatNumber": 113.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 113.0,
+            "endBeatNumber": 115.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 115.0,
+            "endBeatNumber": 116.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 117.0,
+            "endBeatNumber": 120.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 119.0,
+            "endBeatNumber": 121.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "false"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 121.0,
+            "endBeatNumber": 124.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 124.0,
+            "endBeatNumber": 125.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 124.0,
+            "endBeatNumber": 125.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 124.0,
+            "endBeatNumber": 125.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 128.0,
+            "endBeatNumber": 129.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 132.0,
+            "endBeatNumber": 133.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 136.0,
+            "endBeatNumber": 137.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 0,
+            "startBeatNumber": 139.5,
+            "endBeatNumber": 152.5,
+            "clipin": 0.0,
+            "type": "StartVibeChain",
+            "audioEvents": [],
+            "dataPairs": []
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 140.0,
+            "endBeatNumber": 141.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 144.0,
+            "endBeatNumber": 145.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 148.0,
+            "endBeatNumber": 149.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 152.0,
+            "endBeatNumber": 153.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "7358"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 156.0,
+            "endBeatNumber": 157.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 157.0,
+            "endBeatNumber": 158.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 158.5,
+            "endBeatNumber": 159.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 161.0,
+            "endBeatNumber": 162.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 162.0,
+            "endBeatNumber": 163.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 164.0,
+            "endBeatNumber": 165.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 165.0,
+            "endBeatNumber": 166.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 166.5,
+            "endBeatNumber": 167.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 169.0,
+            "endBeatNumber": 170.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 170.0,
+            "endBeatNumber": 171.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 172.0,
+            "endBeatNumber": 173.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 173.0,
+            "endBeatNumber": 174.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 174.5,
+            "endBeatNumber": 175.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 177.0,
+            "endBeatNumber": 178.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 178.0,
+            "endBeatNumber": 179.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 179.5,
+            "endBeatNumber": 180.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 181.0,
+            "endBeatNumber": 184.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 183.0,
+            "endBeatNumber": 185.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "false"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 185.0,
+            "endBeatNumber": 188.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "true"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 188.0,
+            "endBeatNumber": 189.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 188.0,
+            "endBeatNumber": 189.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 188.0,
+            "endBeatNumber": 189.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 192.0,
+            "endBeatNumber": 195.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 196.0,
+            "endBeatNumber": 199.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 200.0,
+            "endBeatNumber": 203.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 204.0,
+            "endBeatNumber": 207.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 208.0,
+            "endBeatNumber": 211.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 212.0,
+            "endBeatNumber": 215.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 216.0,
+            "endBeatNumber": 219.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 220.0,
+            "endBeatNumber": 223.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 221.0,
+            "endBeatNumber": 222.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 224.0,
+            "endBeatNumber": 225.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 228.0,
+            "endBeatNumber": 231.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 229.0,
+            "endBeatNumber": 230.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 232.0,
+            "endBeatNumber": 233.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 236.0,
+            "endBeatNumber": 239.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 237.0,
+            "endBeatNumber": 238.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 240.0,
+            "endBeatNumber": 243.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 241.0,
+            "endBeatNumber": 242.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 243.0,
+            "endBeatNumber": 246.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 244.0,
+            "endBeatNumber": 245.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 246.0,
+            "endBeatNumber": 249.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 247.0,
+            "endBeatNumber": 248.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 252.0,
+            "endBeatNumber": 255.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 253.0,
+            "endBeatNumber": 254.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 256.0,
+            "endBeatNumber": 257.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 260.0,
+            "endBeatNumber": 263.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 261.0,
+            "endBeatNumber": 262.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 264.0,
+            "endBeatNumber": 265.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 268.0,
+            "endBeatNumber": 271.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 269.0,
+            "endBeatNumber": 270.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 272.0,
+            "endBeatNumber": 275.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 273.0,
+            "endBeatNumber": 274.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 275.0,
+            "endBeatNumber": 276.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 276.0,
+            "endBeatNumber": 279.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 277.0,
+            "endBeatNumber": 278.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 279.0,
+            "endBeatNumber": 280.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 280.0,
+            "endBeatNumber": 283.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 281.0,
+            "endBeatNumber": 282.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 283.0,
+            "endBeatNumber": 284.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 284.0,
+            "endBeatNumber": 285.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 0,
+            "startBeatNumber": 287.5,
+            "endBeatNumber": 300.5,
+            "clipin": 0.0,
+            "type": "StartVibeChain",
+            "audioEvents": [],
+            "dataPairs": []
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 288.0,
+            "endBeatNumber": 291.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1817"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 292.0,
+            "endBeatNumber": 295.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 296.0,
+            "endBeatNumber": 299.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 300.0,
+            "endBeatNumber": 303.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 304.0,
+            "endBeatNumber": 307.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 308.0,
+            "endBeatNumber": 311.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 312.0,
+            "endBeatNumber": 315.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 316.0,
+            "endBeatNumber": 319.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 317.0,
+            "endBeatNumber": 318.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 320.0,
+            "endBeatNumber": 321.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 324.0,
+            "endBeatNumber": 327.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 325.0,
+            "endBeatNumber": 326.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 328.0,
+            "endBeatNumber": 329.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 332.0,
+            "endBeatNumber": 335.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 333.0,
+            "endBeatNumber": 334.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 336.0,
+            "endBeatNumber": 339.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 337.0,
+            "endBeatNumber": 338.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 339.0,
+            "endBeatNumber": 342.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 340.0,
+            "endBeatNumber": 341.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 342.0,
+            "endBeatNumber": 345.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 343.0,
+            "endBeatNumber": 344.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 348.0,
+            "endBeatNumber": 351.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 349.0,
+            "endBeatNumber": 350.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 352.0,
+            "endBeatNumber": 353.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 355.0,
+            "endBeatNumber": 357.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 357.0,
+            "endBeatNumber": 358.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 358.0,
+            "endBeatNumber": 359.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 359.0,
+            "endBeatNumber": 360.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 360.0,
+            "endBeatNumber": 361.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 363.0,
+            "endBeatNumber": 365.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 365.0,
+            "endBeatNumber": 366.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 366.0,
+            "endBeatNumber": 367.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 367.0,
+            "endBeatNumber": 368.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 368.0,
+            "endBeatNumber": 369.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 0,
+            "startBeatNumber": 370.5,
+            "endBeatNumber": 375.5,
+            "clipin": 0.0,
+            "type": "StartVibeChain",
+            "audioEvents": [],
+            "dataPairs": []
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 371.0,
+            "endBeatNumber": 374.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "false"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 374.0,
+            "endBeatNumber": 375.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "7358"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 375.0,
+            "endBeatNumber": 378.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "717"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                },
+                {
+                    "_eventDataKey": "ShouldStartFacingRight",
+                    "_eventDataValue": "false"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 380.0,
+            "endBeatNumber": 383.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 381.0,
+            "endBeatNumber": 382.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 384.5,
+            "endBeatNumber": 385.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 388.0,
+            "endBeatNumber": 391.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 389.0,
+            "endBeatNumber": 390.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 392.0,
+            "endBeatNumber": 393.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 396.0,
+            "endBeatNumber": 399.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 397.0,
+            "endBeatNumber": 398.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 400.0,
+            "endBeatNumber": 403.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 401.0,
+            "endBeatNumber": 402.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 403.0,
+            "endBeatNumber": 406.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 404.0,
+            "endBeatNumber": 405.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 406.0,
+            "endBeatNumber": 409.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 407.0,
+            "endBeatNumber": 408.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 409.0,
+            "endBeatNumber": 412.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 410.0,
+            "endBeatNumber": 411.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 412.0,
+            "endBeatNumber": 413.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 413.0,
+            "endBeatNumber": 414.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 416.0,
+            "endBeatNumber": 417.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "7358"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 420.0,
+            "endBeatNumber": 421.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 420.0,
+            "endBeatNumber": 421.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 420.0,
+            "endBeatNumber": 421.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "1722"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 424.0,
+            "endBeatNumber": 425.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 425.5,
+            "endBeatNumber": 427.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "2054"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 428.0,
+            "endBeatNumber": 429.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 429.5,
+            "endBeatNumber": 431.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 432.0,
+            "endBeatNumber": 433.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 433.5,
+            "endBeatNumber": 435.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 436.0,
+            "endBeatNumber": 437.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 437.5,
+            "endBeatNumber": 439.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 440.0,
+            "endBeatNumber": 441.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 441.5,
+            "endBeatNumber": 443.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 444.0,
+            "endBeatNumber": 445.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 445.5,
+            "endBeatNumber": 447.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 448.0,
+            "endBeatNumber": 449.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 449.5,
+            "endBeatNumber": 451.5,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "4355"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 452.0,
+            "endBeatNumber": 455.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 456.0,
+            "endBeatNumber": 459.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 460.0,
+            "endBeatNumber": 463.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 464.0,
+            "endBeatNumber": 467.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 1,
+            "startBeatNumber": 468.0,
+            "endBeatNumber": 471.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 2,
+            "startBeatNumber": 472.0,
+            "endBeatNumber": 475.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8156"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        },
+        {
+            "group": 0,
+            "track": 3,
+            "startBeatNumber": 476.0,
+            "endBeatNumber": 477.0,
+            "clipin": 0.0,
+            "type": "SpawnEnemy",
+            "audioEvents": [],
+            "dataPairs": [
+                {
+                    "_eventDataKey": "EnemyId",
+                    "_eventDataValue": "8519"
+                },
+                {
+                    "_eventDataKey": "ShouldClampToSubdivisions",
+                    "_eventDataValue": "True"
+                }
+            ]
+        }
+    ],
+    "name": "",
+    "hasInputMappingOverride": false,
+    "inputMappingOverrideConfiguration": 0,
+    "cameraZoomLevel": 0,
+    "BeatTimings": []
+}

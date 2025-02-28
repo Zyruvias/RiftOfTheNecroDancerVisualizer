@@ -83,7 +83,7 @@ export const processTrackData2 = (trackData, beatMapData, vibePowerData: Vibe[])
         const currentVibe = vibePowerData[currentVibeIndex] ?? {}
 
         // current hits between start combo and vibe enemy expectation sum
-        vibePowerActive = currentVibe.combo + currentVibe.enemies < monsterHitCount ||
+        vibePowerActive = currentVibe.combo + currentVibe.enemies > monsterHitCount &&  
             monsterHitCount >= currentVibe.combo
         // vibe power is activated BEFORE the next hit
         if (vibePowerActive) {

@@ -1,10 +1,11 @@
-import { Anchor, Button, Center, Group, Select } from "@mantine/core";
+import { Anchor, Button, Center, Group, Select, Tooltip } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data/Charts";
 import { useEffect, useState } from "react";
 import { TrackDisplay } from "./TrackDisplay";
 import { getVibePathForTrackAndDifficulty, useVibePowerPaths } from "./queries";
 import { Credits } from "./Credits";
+import { Changelog } from "./Changelog";
 
 const DIFFICULTIES = [
   { value: "Easy", label: "Easy" },
@@ -52,30 +53,39 @@ function App() {
   return (
     <>
       <Center>
-        <div>
-          <h1>Rift of the Necrodancer Optimizer</h1>
-        </div>
+        <h1>Rift of the Necrodancer Visualizer</h1>
       </Center>
       <Center>
         <Group>
           <div>
-            <h2>Song Select</h2>
             <Select
+              label="Song Select"
               data={TRACK_LIST}
               value={track.value}
               onChange={onTrackChange}
             />
           </div>
           <div>
-            <h2>Difficulty Select</h2>
             <Select
+              label="Difficulty Select"
               data={DIFFICULTIES}
               value={difficulty.value}
               onChange={onDifficultyChange}
             />
           </div>
           <Credits />
-          <Anchor component={Button} href={"https://github.com/Zyruvias/RiftOfTheNecroDancerVisualizer/issues/new"}> Feedback</Anchor>
+          <Tooltip label={"Submit feedback on github, or message me on discord (@zyruvias)"}>
+            <Button>
+              <Anchor
+                c="white"
+                href="https://github.com/Zyruvias/RiftOfTheNecroDancerVisualizer/issues/new"
+                target="_blank"
+                >
+                Feedback
+              </Anchor>
+            </Button>
+          </Tooltip>
+          <Changelog />
         </Group>
       </Center>
       <TrackDisplay

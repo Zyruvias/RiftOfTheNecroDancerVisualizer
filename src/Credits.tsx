@@ -12,7 +12,9 @@ export const Credits = ({}) => {
             <br></br>
             <Text>Okami for Vibe Power{" "}
                 <Anchor
-                    href="https://docs.google.com/spreadsheets/d/1qhnWRmLp0d2X18rmVsK_YJh-CiukE-0Gmg8kBMyYe4A/edit?gid=866842032#gid=866842032">
+                    href="https://docs.google.com/spreadsheets/d/1qhnWRmLp0d2X18rmVsK_YJh-CiukE-0Gmg8kBMyYe4A/edit?gid=866842032#gid=866842032"
+                    target="_blank"
+                >
                     spreadsheet
                 </Anchor>
             </Text>

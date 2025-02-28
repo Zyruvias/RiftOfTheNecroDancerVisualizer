@@ -44,6 +44,7 @@ export const TRACK_LIST = [
 
 ]
 
+// TODO: track files should just be renamed but I got lazy
 export const getTrack = async (track, difficulty) => {
     try {
         return await import(`./${difficulty.label}-RhythmRift_${track.value}_${difficulty.value}.json`)

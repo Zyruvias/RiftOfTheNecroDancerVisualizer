@@ -103,6 +103,11 @@ export const TrackDisplay = ({
 
     return (
         <>
+            {/* <Expand title={"Processed Track Data"}> */}
+                <Group gap={0} className={classes.content}>
+                    {processedTrackData2?.map((beat, i) =>  <Beat key={i} {...beat} />)}
+                </Group>
+            {/* </Expand> */}
             <Expand title={"Track Data (original"}>
                 <Center>
                     <Group align="top" mah={"40hv"} preventGrowOverflow>
@@ -115,11 +120,6 @@ export const TrackDisplay = ({
                     </Group>
                 </Center>
             </Expand>
-            {/* <Expand title={"Processed Track Data"}> */}
-                <Group gap={0} className={classes.content}>
-                    {processedTrackData2?.map((beat, i) =>  <Beat key={i} {...beat} />)}
-                </Group>
-            {/* </Expand> */}
         </>
     )
 }

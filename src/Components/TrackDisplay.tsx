@@ -1,9 +1,9 @@
 import React, { useMemo, useRef } from "react"
 import { Button, Group, Collapse, Box, Stack, AccordionChevron, Code, Center } from '@mantine/core';
-import { processTrackData, processTrackData2 } from "./utils"
+import { processTrackData, processTrackData2 } from "../utils"
 import { useDisclosure } from '@mantine/hooks';
 import classes from "./TrackDisplay.module.css"
-import type { VibeWindow, Beat as BeatProps } from "./utils";
+import type { VibeWindow, Beat as BeatProps } from "../utils";
 
 
 const Expand = ({ children, title, boxStyle }) => {

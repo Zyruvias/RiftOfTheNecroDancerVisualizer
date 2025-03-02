@@ -2,10 +2,10 @@ import { Anchor, Button, Center, Group, Select, Tooltip } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data/Charts";
 import { useEffect, useState } from "react";
-import { TrackDisplay } from "./TrackDisplay";
+import { TrackDisplay } from "./Components/TrackDisplay";
 import { getVibePathForTrackAndDifficulty, useVibePowerPaths } from "./queries";
-import { Credits } from "./Credits";
-import { Changelog } from "./Changelog";
+import { Credits } from "./Components/Credits";
+import { Changelog } from "./Components/Changelog";
 
 const DIFFICULTIES = [
   { value: "Easy", label: "Easy" },

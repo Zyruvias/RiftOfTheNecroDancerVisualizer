@@ -1,24 +1,28 @@
 import React from "react"
-import { Button, Modal, Text, Anchor, ModalHeader, List } from "@mantine/core"
+import { Button, Modal, Text, Anchor, ModalHeader, List, Stack, Flex, Divider } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
+import { useReleaseNotes } from "./queries"
+import { Release } from "./Release"
 
 export const Changelog = ({}) => {
     const [opened, { open, close }] = useDisclosure()
+
+    const releaseNotesQuery = useReleaseNotes()
+
     return <>
         <Modal opened={opened} onClose={close} title={"Changelog"}>
-            <h3>Version 1.0.0 - Original Release</h3>
-            <h4>Feb 28, 2025</h4>
-            <List>
-                <List.Item>
-                    Visualizes of Rift of the NecroDancer Tracks for all difficulties
-                </List.Item>
-                <List.Item >Visualizes preliminary Optimal Vibe Power Pathing from
-                    <Anchor
-                        href="https://docs.google.com/spreadsheets/d/1qhnWRmLp0d2X18rmVsK_YJh-CiukE-0Gmg8kBMyYe4A/edit?gid=866842032#gid=866842032">
-                        {" Okami's community spreadsheet. "}
-                    </Anchor> Missing Rift Within - Impossible as of this first release.
-                </List.Item>
-            </List>
+            <Flex direction="column-reverse">
+                {releaseNotesQuery?.data?.map((release, i) => <>
+                    {i !== releaseNotesQuery.data?.length - 1 && <Divider />}
+                    <Release
+                        body={release.body}
+                        publishedAt={release.published_at}
+                        name={release.name}
+                        tagName={release.tag_name}
+                    />
+                </>
+                )}
+            </Flex>
         </Modal>
         <Button onClick={open}>
             Changelog

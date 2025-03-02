@@ -70,3 +70,16 @@ export const useVibePowerPaths =  () => {
     queryFn: getVibePowerValues,
  })
 }
+
+const getReleaseNotes = async () => {
+    const results = await fetch("https://api.github.com/repos/Zyruvias/RiftOfTheNecroDancerVisualizer/releases")
+    const json = await results.json()
+    console.log(json)
+    return json
+}
+
+export const useReleaseNotes = () => useQuery({
+    queryFn: getReleaseNotes,
+    staleTime: Infinity,
+    queryKey: ["releases"]
+})

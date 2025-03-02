@@ -71,7 +71,14 @@ export const useVibePowerPaths =  () => {
  })
 }
 
-const getReleaseNotes = async () => {
+export type Release = {
+    published_at: string
+    tag_name: string
+    name: string
+    body: string
+}
+
+const getReleaseNotes = async (): Promise<Release[]> => {
     const results = await fetch("https://api.github.com/repos/Zyruvias/RiftOfTheNecroDancerVisualizer/releases")
     const json = await results.json()
     console.log(json)

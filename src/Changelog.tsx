@@ -1,8 +1,7 @@
 import React from "react"
-import { Button, Modal, Text, Anchor, ModalHeader, List, Stack, Flex, Divider } from "@mantine/core"
+import { Button, Modal, Flex, Divider } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
-import { useReleaseNotes } from "./queries"
-import { Release } from "./Release"
+import { Release, useReleaseNotes } from "./queries"
 
 export const Changelog = ({}) => {
     const [opened, { open, close }] = useDisclosure()

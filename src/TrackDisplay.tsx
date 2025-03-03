@@ -4,6 +4,7 @@ import { processTrackData, processTrackData2 } from "./utils"
 import { useDisclosure } from '@mantine/hooks';
 import classes from "./TrackDisplay.module.css"
 import type { VibeWindow, Beat as BeatProps } from "./utils";
+import { Hit } from "./Hit";
 
 
 const Expand = ({ children, title, boxStyle }) => {
@@ -27,30 +28,6 @@ const Expand = ({ children, title, boxStyle }) => {
   );
 }
 
-export const Hit = ({
-    offset,
-    enemy
-}) => {
-    return <div style={{
-        position: "absolute",
-        ...(enemy.isVibeActive ? {
-            backgroundColor: "orange",
-            borderWidth: "1px"
-        } : {
-            backgroundColor: "blue",
-        }),
-
-        borderRadius: "50%",
-        minWidth: "5px",
-        minHeight: "5px",
-        offsetAnchor: "center",
-        left: "-2.5px",
-        transformOrigin: "center",
-        // TODO: ratio of height/width not magic number
-        transform: `translate(${Math.round((offset ?? 0) * 1000)}%, 0%)`,
-        zIndex: 2,
-    }} />
-}
 
 export const Beat = ({
     startBeat,

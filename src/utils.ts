@@ -126,10 +126,6 @@ const placeEnemyOnBeatMap = ({
     let currentRelevantBeatIndex = relevantBeatNumber
     while (hitCount > 0) {
         const relevantBeat = beats[Math.floor(currentRelevantBeatIndex)]
-
-        if (!relevantBeat) {
-            console.log(currentRelevantBeatIndex)
-        }
         const relevantEnemyObject =
             relevantBeat.tracks[currentTrack]
             // TODO: figure out appropriate accuracy from hitmaps to event json
@@ -150,25 +146,22 @@ const placeEnemyOnBeatMap = ({
                         image: wyrmImageMap.body,
                         height: 50,
                         left: 12.5,
-                        transform: "rotate(90deg)"
+                        transform: "rotate(90deg)",
+                        partialBeatOffset: currentLocalBeatIndex - Math.floor(currentLocalBeatIndex)
                     })
                 } else {
                     beatTrack.unshift({
                         enemyId: WYRM,
                         image: wyrmImageMap.tail,
-                        transform: "rotate(90deg)"
+                        partialBeatOffset: currentLocalBeatIndex - Math.floor(currentLocalBeatIndex),
+                        transform: "rotate(90deg)",
+                        height: 50,
+                        left: 12.5,
                     })
                 }
                 currentWyrmBeat += 1
                 currentLocalBeatIndex += 1
             }
-        }
-        if (enemy.EnemyId == BLUE_BAT) {
-
-            console.log(event)
-            console.log(enemy)
-            console.log(currentRelevantBeatIndex, currentBeat, hitCount, enemy.EnemyId)
-            console.log(`currentRelevantBeatIndex, currentBeat, hitCount, enemy.enemyId`)
         }
         if (!relevantEnemyObject) {
             return
@@ -180,9 +173,7 @@ const placeEnemyOnBeatMap = ({
         }
         
         hitCount -= 1
-        if (enemy.EnemyId == BLUE_BAT) console.log(`currentTrack = (${currentTrack} + 3 + ${trackShift}) % 3`)
-            currentTrack = (currentTrack + 3 + trackShift) % 3
-        if (enemy.EnemyId == BLUE_BAT) console.log(`currentTrack = ${currentTrack}`)
+        currentTrack = (currentTrack + 3 + trackShift) % 3
         currentBeat += hitBeatOffset
         currentRelevantBeatIndex += hitBeatOffset
     }

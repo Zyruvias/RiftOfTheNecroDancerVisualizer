@@ -6,7 +6,7 @@ import { getVibePathForTrackAndDifficulty, useVibePowerPaths } from "./queries";
 import { Credits } from "./Components/Credits";
 import { Changelog } from "./Components/Changelog";
 import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data";
-import { SongDisplay } from "./SongDisplay";
+import { SongDisplay } from "./Components/SongDisplay";
 
 const DIFFICULTIES = [
   { value: "Easy", label: "Easy" },

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Anchor, Button, Center, Group, Select, Stack, Title, Tooltip } from "@mantine/core";
 import "@mantine/core/styles.css";
-import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data";
-import { TrackDisplay } from "./TrackDisplay";
+import { TrackDisplay } from "./Components/TrackDisplay";
 import { getVibePathForTrackAndDifficulty, useVibePowerPaths } from "./queries";
-import { Credits } from "./Credits";
-import { Changelog } from "./Changelog";
+import { Credits } from "./Components/Credits";
+import { Changelog } from "./Components/Changelog";
+import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data";
 import { SongDisplay } from "./SongDisplay";
 
 const DIFFICULTIES = [

@@ -3,211 +3,211 @@
         {
             "value": "DiscoDisaster",
             "label": "Disco Disaster",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Necro_DiscoDisaster.png"
         },
         {
             "value": "Elusional",
             "label": "Elusional",
-            "artist": "",
+            "artist": "Jules Conroy",
             "albumImage": "data/Dove_Elusional.png"
         },
         {
             "value": "Visualize_Yourself",
             "label": "Visualize Yourself",
-            "artist": "",
+            "artist": "Josie Brechner",
             "albumImage": "data/Dove_VisualizeYourself.png"
         },
         {
             "value": "Spookhouse Pop",
             "label": "Spookhouse Pop",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Dove_SpookhousePop.png"
         },
         {
             "value": "Om and On",
             "label": "Om And On",
-            "artist": "",
+            "artist": "Alex Moukala",
             "albumImage": "data/Dove_OmOn.png"
         },
         {
             "value": "Morning_Dove",
             "label": "Morning Dove",
-            "artist": "",
+            "artist": "Sam Webster & Nick Nausbaum",
             "albumImage": "data/Dove_MorningDove.png"
         },
         {
             "value": "Heph's Mess",
             "label": "Heph's Mess",
-            "artist": "",
+            "artist": "Sam Webster & Nick Nausbaum",
             "albumImage": "data/Heph_HephsMess.png"
         },
         {
             "value": "Amalgamaniac",
             "label": "Amalgamaniac",
-            "artist": "",
+            "artist": "Alex Moukala",
             "albumImage": "data/Heph_Amalgamaniac.png"
         },
         {
             "value": "Hang Ten Heph",
             "label": "Hang Ten Heph",
-            "artist": "",
+            "artist": "Josie Brechner",
             "albumImage": "data/Heph_Hang10.png"
         },
         {
             "value": "Count_Funkula",
             "label": "Count Funkula",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Heph_CountFunkula.png"
         },
         {
             "value": "Overthinker",
             "label": "Overthinker",
-            "artist": "",
+            "artist": "Jules Conroy",
             "albumImage": "data/Heph_Overthinker.png"
         },
         {
             "value": "Cryp2que",
             "label": "Cryp2que",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Necro_Cryp2que.png"
         },
         {
             "value": "Nocturning",
             "label": "Nocturning",
-            "artist": "",
+            "artist": "Sam Webster & Nick Nausbaum",
             "albumImage": "data/Nocturna_Nocturning.png"
         },
         {
             "value": "Glass Cages",
             "label": "Glass Cages",
-            "artist": "",
+            "artist": "Josie Brechner",
             "albumImage": "data/Nocturna_GlassCages.png"
         },
         {
             "value": "Hallow Queen",
             "label": "Hallow Queen",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Nocturna_HallowQueen.png"
         },
         {
             "value": "Progenitor",
             "label": "Progenitor",
-            "artist": "",
+            "artist": "Jules Conroy",
             "albumImage": "data/Nocturna_Progenitor.png"
         },
         {
             "value": "Matriarch",
             "label": "Matriarch",
-            "artist": "",
+            "artist": "Jules Conroy",
             "albumImage": "data/Nocturna_Matriarch.png"
         },
         {
             "value": "Thunder",
             "label": "Under The Thunder",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Suzu_UnderTheThunder.png"
-        },
-        {
-            "value": "Matron",
-            "label": "What's In The Box?",
-            "artist": "",
-            "albumImage": "data/Matron #634.png"
         },
         {
             "value": "Eldritch_House",
             "label": "Eldritch House",
-            "artist": "",
+            "artist": "Alex Moukala",
             "albumImage": "data/Suzu_EldritchHouse.png"
         },
         {
             "value": "RAVEvenge",
             "label": "RAVEVENGE",
-            "artist": "",
+            "artist": "Alex Moukala",
             "albumImage": "data/Suzu_Ravevenge.png"
         },
         {
             "value": "Rift Within",
             "label": "Rift Within",
-            "artist": "",
+            "artist": "Josie Brechner",
             "albumImage": "data/Suzu_RiftWithin.png"
         },
         {
             "value": "Suzus Quest",
             "label": "Suzu's Quest",
-            "artist": "",
+            "artist": "Sam Webster & Nick Nausbaum",
             "albumImage": "data/Suzu_SuzusQuest.png"
         },
         {
             "value": "Necropolis",
             "label": "Necropolis",
-            "artist": "",
+            "artist": "Sam Webster & Nick Nausbaum",
             "albumImage": "data/Necro_Necropolis.png"
         },
         {
             "value": "Baboosh",
             "label": "Baboosh",
-            "artist": "",
+            "artist": "Danny Baranowsky & Josie Brechner",
             "albumImage": "data/Necro_Baboosh.png"
         },
         {
             "value": "Necro Sonatica",
             "label": "Necro Sonaetica",
-            "artist": "",
+            "artist": "Jules Conroy",
             "albumImage": "data/Necro_NecroSonatica.png"
         },
         {
             "value": "Harmonie",
             "label": "She Banned",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Harmonie.png"
         },
         {
             "value": "Deep_Blues",
             "label": "King's Ruse",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/DeepBlues #11735.png"
+        },
+        {
+            "value": "Matron",
+            "label": "What's In The Box?",
+            "artist": "Danny Baranowsky",
+            "albumImage": "data/Matron #634.png"
         },
         {
             "value": "BraveTheHarvester",
             "label": "Brave The Harvester",
-            "artist": "",
+            "artist": "Jules Conroy",
             "albumImage": "data/Reaper.png"
         },
         {
             "value": "Final_Fugue",
             "label": "Final Fugue",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Necro_DiscoDisaster.png"
         },
         {
             "value": "Twombtorial",
             "label": "Twombtorial",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Twombtorial.png"
         },
         {
             "value": "Portamello",
             "label": "Portamello",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Portamello.png"
         },
         {
             "value": "DLCApricot01",
             "label": "Slugger's Refrain",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Apricot.png"
         },
         {
             "value": "DLCApricot02",
             "label": "Got Danged",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Apricot.png"
         },
         {
             "value": "DLCApricot03",
             "label": "Bootus Bleez",
-            "artist": "",
+            "artist": "Danny Baranowsky",
             "albumImage": "data/Apricot.png"
         }
     ]

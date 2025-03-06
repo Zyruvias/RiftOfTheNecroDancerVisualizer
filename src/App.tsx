@@ -1,12 +1,12 @@
-import React from "react";
-import { Anchor, Box, Button, ButtonGroup, Center, Group, Image, Select, Stack, Text, Title, Tooltip } from "@mantine/core";
+import React, { useEffect, useState } from "react";
+import { Anchor, Button, Center, Group, Select, Stack, Title, Tooltip } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data";
-import { useEffect, useState } from "react";
 import { TrackDisplay } from "./TrackDisplay";
 import { getVibePathForTrackAndDifficulty, useVibePowerPaths } from "./queries";
 import { Credits } from "./Credits";
 import { Changelog } from "./Changelog";
+import { SongDisplay } from "./SongDisplay";
 
 const DIFFICULTIES = [
   { value: "Easy", label: "Easy" },
@@ -14,15 +14,6 @@ const DIFFICULTIES = [
   { value: "Hard", label: "Hard" },
   { value: "Expert", label: "Impossible" },
 ];
-
-const SongDisplay = ({ trackName, trackAuthor, image  }) => {
-  return <Group p="md" justify="end" gap={"lg"}>
-    <Stack gap={"lg"} align="end">
-      <Image fit="contain" src={image} radius={"md"} width={300} height={300}/>
-      <Text>{trackName} by {trackAuthor}</Text>
-    </Stack>
-  </Group>
-}
 
 function App() {
   const [track, setTrack] = useState(TRACK_LIST[0]);
@@ -81,8 +72,8 @@ function App() {
         </Tooltip>
         <Changelog />
         </Group>
-      <Center wrap="wrap">
-        <Stack p={"sm"} wrap="nowrap">
+      <Center>
+        <Stack p={"sm"}>
           <Select
             label="Song Select"
             data={TRACK_LIST}

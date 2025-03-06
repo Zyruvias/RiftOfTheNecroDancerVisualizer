@@ -1,0 +1,214 @@
+{
+    "tracks": [
+        {
+            "value": "DiscoDisaster",
+            "label": "Disco Disaster",
+            "artist": "",
+            "albumImage": "data/Necro_DiscoDisaster.png"
+        },
+        {
+            "value": "Elusional",
+            "label": "Elusional",
+            "artist": "",
+            "albumImage": "data/Dove_Elusional.png"
+        },
+        {
+            "value": "Visualize_Yourself",
+            "label": "Visualize Yourself",
+            "artist": "",
+            "albumImage": "data/Dove_VisualizeYourself.png"
+        },
+        {
+            "value": "Spookhouse Pop",
+            "label": "Spookhouse Pop",
+            "artist": "",
+            "albumImage": "data/Dove_SpookhousePop.png"
+        },
+        {
+            "value": "Om and On",
+            "label": "Om And On",
+            "artist": "",
+            "albumImage": "data/Dove_OmOn.png"
+        },
+        {
+            "value": "Morning_Dove",
+            "label": "Morning Dove",
+            "artist": "",
+            "albumImage": "data/Dove_MorningDove.png"
+        },
+        {
+            "value": "Heph's Mess",
+            "label": "Heph's Mess",
+            "artist": "",
+            "albumImage": "data/Heph_HephsMess.png"
+        },
+        {
+            "value": "Amalgamaniac",
+            "label": "Amalgamaniac",
+            "artist": "",
+            "albumImage": "data/Heph_Amalgamaniac.png"
+        },
+        {
+            "value": "Hang Ten Heph",
+            "label": "Hang Ten Heph",
+            "artist": "",
+            "albumImage": "data/Heph_Hang10.png"
+        },
+        {
+            "value": "Count_Funkula",
+            "label": "Count Funkula",
+            "artist": "",
+            "albumImage": "data/Heph_CountFunkula.png"
+        },
+        {
+            "value": "Overthinker",
+            "label": "Overthinker",
+            "artist": "",
+            "albumImage": "data/Heph_Overthinker.png"
+        },
+        {
+            "value": "Cryp2que",
+            "label": "Cryp2que",
+            "artist": "",
+            "albumImage": "data/Necro_Cryp2que.png"
+        },
+        {
+            "value": "Nocturning",
+            "label": "Nocturning",
+            "artist": "",
+            "albumImage": "data/Nocturna_Nocturning.png"
+        },
+        {
+            "value": "Glass Cages",
+            "label": "Glass Cages",
+            "artist": "",
+            "albumImage": "data/Nocturna_GlassCages.png"
+        },
+        {
+            "value": "Hallow Queen",
+            "label": "Hallow Queen",
+            "artist": "",
+            "albumImage": "data/Nocturna_HallowQueen.png"
+        },
+        {
+            "value": "Progenitor",
+            "label": "Progenitor",
+            "artist": "",
+            "albumImage": "data/Nocturna_Progenitor.png"
+        },
+        {
+            "value": "Matriarch",
+            "label": "Matriarch",
+            "artist": "",
+            "albumImage": "data/Nocturna_Matriarch.png"
+        },
+        {
+            "value": "Thunder",
+            "label": "Under The Thunder",
+            "artist": "",
+            "albumImage": "data/Suzu_UnderTheThunder.png"
+        },
+        {
+            "value": "Matron",
+            "label": "What's In The Box?",
+            "artist": "",
+            "albumImage": "data/Matron #634.png"
+        },
+        {
+            "value": "Eldritch_House",
+            "label": "Eldritch House",
+            "artist": "",
+            "albumImage": "data/Suzu_EldritchHouse.png"
+        },
+        {
+            "value": "RAVEvenge",
+            "label": "RAVEVENGE",
+            "artist": "",
+            "albumImage": "data/Suzu_Ravevenge.png"
+        },
+        {
+            "value": "Rift Within",
+            "label": "Rift Within",
+            "artist": "",
+            "albumImage": "data/Suzu_RiftWithin.png"
+        },
+        {
+            "value": "Suzus Quest",
+            "label": "Suzu's Quest",
+            "artist": "",
+            "albumImage": "data/Suzu_SuzusQuest.png"
+        },
+        {
+            "value": "Necropolis",
+            "label": "Necropolis",
+            "artist": "",
+            "albumImage": "data/Necro_Necropolis.png"
+        },
+        {
+            "value": "Baboosh",
+            "label": "Baboosh",
+            "artist": "",
+            "albumImage": "data/Necro_Baboosh.png"
+        },
+        {
+            "value": "Necro Sonatica",
+            "label": "Necro Sonaetica",
+            "artist": "",
+            "albumImage": "data/Necro_NecroSonatica.png"
+        },
+        {
+            "value": "Harmonie",
+            "label": "She Banned",
+            "artist": "",
+            "albumImage": "data/Harmonie.png"
+        },
+        {
+            "value": "Deep_Blues",
+            "label": "King's Ruse",
+            "artist": "",
+            "albumImage": "data/DeepBlues #11735.png"
+        },
+        {
+            "value": "BraveTheHarvester",
+            "label": "Brave The Harvester",
+            "artist": "",
+            "albumImage": "data/Reaper.png"
+        },
+        {
+            "value": "Final_Fugue",
+            "label": "Final Fugue",
+            "artist": "",
+            "albumImage": "data/Necro_DiscoDisaster.png"
+        },
+        {
+            "value": "Twombtorial",
+            "label": "Twombtorial",
+            "artist": "",
+            "albumImage": "data/Twombtorial.png"
+        },
+        {
+            "value": "Portamello",
+            "label": "Portamello",
+            "artist": "",
+            "albumImage": "data/Portamello.png"
+        },
+        {
+            "value": "DLCApricot01",
+            "label": "Slugger's Refrain",
+            "artist": "",
+            "albumImage": "data/Apricot.png"
+        },
+        {
+            "value": "DLCApricot02",
+            "label": "Got Danged",
+            "artist": "",
+            "albumImage": "data/Apricot.png"
+        },
+        {
+            "value": "DLCApricot03",
+            "label": "Bootus Bleez",
+            "artist": "",
+            "albumImage": "data/Apricot.png"
+        }
+    ]
+}

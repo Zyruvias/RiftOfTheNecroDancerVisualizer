@@ -1,6 +1,7 @@
-import { Anchor, Button, Center, Group, Select, Tooltip } from "@mantine/core";
+import React from "react";
+import { Anchor, Box, Button, ButtonGroup, Center, Group, Image, Select, Stack, Text, Title, Tooltip } from "@mantine/core";
 import "@mantine/core/styles.css";
-import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data/Charts";
+import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data";
 import { useEffect, useState } from "react";
 import { TrackDisplay } from "./TrackDisplay";
 import { getVibePathForTrackAndDifficulty, useVibePowerPaths } from "./queries";
@@ -13,6 +14,15 @@ const DIFFICULTIES = [
   { value: "Hard", label: "Hard" },
   { value: "Expert", label: "Impossible" },
 ];
+
+const SongDisplay = ({ trackName, trackAuthor, image  }) => {
+  return <Group p="md" justify="end" gap={"lg"}>
+    <Stack gap={"lg"} align="end">
+      <Image fit="contain" src={image} radius={"md"} width={300} height={300}/>
+      <Text>{trackName} by {trackAuthor}</Text>
+    </Stack>
+  </Group>
+}
 
 function App() {
   const [track, setTrack] = useState(TRACK_LIST[0]);
@@ -52,41 +62,46 @@ function App() {
   };
   return (
     <>
-      <Center>
-        <h1>Rift of the Necrodancer Visualizer</h1>
+      <Center p={"md"}>
+        <Title>Rift of the Necrodancer Visualizer</Title>
       </Center>
-      <Center>
-        <Group>
-          <div>
-            <Select
-              label="Song Select"
-              data={TRACK_LIST}
-              value={track.value}
-              onChange={onTrackChange}
-            />
-          </div>
-          <div>
-            <Select
-              label="Difficulty Select"
-              data={DIFFICULTIES}
-              value={difficulty.value}
-              onChange={onDifficultyChange}
-            />
-          </div>
-          <Credits />
-          <Tooltip label={"Submit feedback on github, or message me on discord (@zyruvias)"}>
-            <Button>
-              <Anchor
-                c="white"
-                href="https://github.com/Zyruvias/RiftOfTheNecroDancerVisualizer/issues/new"
-                target="_blank"
-                >
-                Feedback
-              </Anchor>
-            </Button>
-          </Tooltip>
-          <Changelog />
+
+      <Group justify="center" p={"md"}>
+        <Credits />
+        <Tooltip label={"Submit feedback on github, or message me on discord (@zyruvias)"}>
+          <Button>
+            <Anchor
+              c="white"
+              href="https://github.com/Zyruvias/RiftOfTheNecroDancerVisualizer/issues/new"
+              target="_blank"
+              >
+              Feedback
+            </Anchor>
+          </Button>
+        </Tooltip>
+        <Changelog />
         </Group>
+      <Center wrap="wrap">
+        <Stack p={"sm"} wrap="nowrap">
+          <Select
+            label="Song Select"
+            data={TRACK_LIST}
+            value={track.value}
+            onChange={onTrackChange}
+          />
+          <Select
+            label="Difficulty Select"
+            data={DIFFICULTIES}
+            value={difficulty.value}
+            onChange={onDifficultyChange}
+          />
+        </Stack>
+
+        <SongDisplay
+          trackName={track.label}
+          trackAuthor={track.artist}
+          image={track.albumImage}
+        />
       </Center>
       <TrackDisplay
         trackData={trackData}

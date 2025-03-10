@@ -18,7 +18,7 @@ function App() {
   const [track, setTrack] = useState(TRACK_LIST[0]);
   const [trackData, setTrackData] = useState(null);
   const [beatData, setBeatData] = useState(null);
-  const [difficulty, setDifficulty] = useState(DIFFICULTIES[0]);
+  const [difficulty, setDifficulty] = useState(DIFFICULTIES[3]);
   useEffect(() => {
     const fetchData = async () => {
       const data = await getTrack(track, difficulty);

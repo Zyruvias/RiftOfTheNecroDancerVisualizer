@@ -58,6 +58,15 @@ const WHITE_SKELETON_DOUBLE_SHIELD = 6471
 const WHITE_SKELETON = 2202
 const WYRM = 7794
 const BLUE_SLIME = 4355
+const APPLE = 7358
+const CHEESE = 2054
+const YELLOW_SKELETON = 6803
+const RED_BAT = 911
+const YELLOW_BAT = 717
+const BLADE_MASTER = 929
+const YELLOW_SLIME = 9189
+const DRUMSTICK = 1817
+
 const imageMap = {
     [GREEN_SLIME]: "./data/Enemies/GreenSlime/base.png",
     [WHITE_SKELETON_SHIELD]: "./data/Enemies/WhiteSkeletonShield/base.png",
@@ -66,6 +75,14 @@ const imageMap = {
     [WHITE_SKELETON]: "./data/Enemies/WhiteSkeleton/base.png",
     [WYRM]: "./data/Enemies/Wyrm/base.png",
     [BLUE_SLIME]: "./data/Enemies/BlueSlime/base.png",
+    [APPLE]: "./data/Enemies/Apple/RR_HealthItem_Apple_Hit0.png",
+    [YELLOW_SKELETON]: "./data/Enemies/YellowSkeleton/base.png",
+    [RED_BAT]: "./data/Enemies/RedBat/base.png",
+    [CHEESE]: "./data/Enemies/Cheese/base.png",
+    [YELLOW_BAT]: "./data/Enemies/YellowBat/base.png",
+    [BLADE_MASTER]: "./data/Enemies/RedBladeMaster/base.png",
+    [YELLOW_SLIME]: "./data/Enemies/YellowSlime/base.png",
+    [DRUMSTICK]: "./data/Enemies/Drumstick/base.png",
 }
 
 const wyrmImageMap = {
@@ -77,7 +94,7 @@ const wyrmImageMap = {
 const getEnemyHitInfo = ({ enemy, event }) => {
     let hitBeatOffset = 1
     let hitCount = 1
-    let trackShift = 0
+    let trackShift: number | number[] = 0
     let relevantBeatNumber = event.startBeatNumber + 9
 
     const enemyId = Number(enemy.EnemyId)
@@ -97,10 +114,35 @@ const getEnemyHitInfo = ({ enemy, event }) => {
         case WHITE_SKELETON_SHIELD:
             hitCount = 2
             hitBeatOffset = 0.5
+            break
         case WYRM:
             hitCount = event.endBeatNumber - event.startBeatNumber - 1
             break
+        case YELLOW_SKELETON:
+            hitCount = 2
+            // relevantBeatNumber = event.startBeatNumber + 9 + Number(enemy.BladeMasterAttackRow) - 1
+            break
+        
+        case RED_BAT:
+            hitCount = 3
+            trackShift = enemy.ShouldStartFacingRight ? [1, -1] : [-1, 1]
+            break
+        case CHEESE:
+            hitCount = 2
+            break
+        case YELLOW_BAT:
+            hitCount = 3
+            trackShift = enemy.ShouldStartFacingRight ? 1 : -1
+        case YELLOW_SLIME:
+        case DRUMSTICK:
+            hitCount = 3
+        case GREEN_SLIME:
+        case WHITE_SKELETON:
+        case APPLE:
+        case BLADE_MASTER:
+            break
         default:
+            console.log(enemyId, event)
             break
     }
 
@@ -145,7 +187,7 @@ const placeEnemyOnBeatMap = ({
                         enemyId: WYRM,
                         image: wyrmImageMap.body,
                         height: 50,
-                        left: 12.5,
+                        left: 25,
                         transform: "rotate(90deg)",
                         partialBeatOffset: currentLocalBeatIndex - Math.floor(currentLocalBeatIndex)
                     })
@@ -156,7 +198,7 @@ const placeEnemyOnBeatMap = ({
                         partialBeatOffset: currentLocalBeatIndex - Math.floor(currentLocalBeatIndex),
                         transform: "rotate(90deg)",
                         height: 50,
-                        left: 12.5,
+                        left: 20,
                     })
                 }
                 currentWyrmBeat += 1
@@ -171,9 +213,13 @@ const placeEnemyOnBeatMap = ({
             relevantEnemyObject.enemyId = enemy.EnemyId
             relevantEnemyObject.image = imageMap[enemy.EnemyId]
         }
+
+        const trackShiftToPerform = trackShift?.shift?.() ?? trackShift
+            
         
+        // console.log(relevantEnemyObject.enemyId, JSON.stringify(trackShift), trackShiftToPerform, currentTrack)
         hitCount -= 1
-        currentTrack = (currentTrack + 3 + trackShift) % 3
+        currentTrack = (currentTrack + 3 + trackShiftToPerform) % 3
         currentBeat += hitBeatOffset
         currentRelevantBeatIndex += hitBeatOffset
     }
@@ -282,7 +328,7 @@ export const processTrackData2 = (trackData, beatMapData, vibePowerData: Vibe[])
             continue // TODO figure this out later, more info on track, etc
         }
         const enemy = compileEnemyData(event)
-        const startBeat = Math.floor(event.startBeatNumber)
+        const startBeat = Math.floor(event.startBeatNumber) 
 
         placeEnemyOnBeatMap({
             enemy,

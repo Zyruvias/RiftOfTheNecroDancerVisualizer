@@ -7,7 +7,6 @@
     padding: 0px;
     margin: 0px;
     gap: 0px;
-    flex-grow: 1;
 }
 
 .track {
@@ -19,15 +18,15 @@
     position: relative;
     background-position: right;
     background-repeat: no-repeat;
-    &[data-vibe=true] {
+    /* &[data-vibe=true] {
         background-image: linear-gradient(to left, rgba(255,255,0,0.3) 100%, transparent 100%);
-    }
+    } */
     &[data-shaded=true] {
         background-color: whitesmoke;
     }
 }
 
 .content {
-    margin: 5%;
     border: 1px solid black;
+    border-collapse: collapse;
 }

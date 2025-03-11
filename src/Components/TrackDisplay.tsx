@@ -1,13 +1,14 @@
-import React, { useMemo, useRef } from "react"
+import React, { useContext, useMemo } from "react"
 import { Button, Group, Collapse, Box, Stack, AccordionChevron, Code, Center } from '@mantine/core';
-import { processTrackData, processTrackData2 } from "../utils"
-import { useDisclosure } from '@mantine/hooks';
+import { processTrackData2 } from "../utils"
+import { useDisclosure } from '@mantine/hooks'
 import classes from "./TrackDisplay.module.css"
-import type { VibeWindow, Beat as BeatProps } from "../utils";
+import type { Beat as BeatProps } from "../utils"
+import { defaultSettings, SettingsContext } from "../SettingsContext"
 
 
 const Expand = ({ children, title, boxStyle }) => {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle }] = useDisclosure(false)
 
   return (
     <Box mx="auto" m={50}>
@@ -29,25 +30,28 @@ const Expand = ({ children, title, boxStyle }) => {
 
 export const Hit = ({
     offset,
-    enemy
+    enemy,
+    color,
+    useImage,
+    size,
+    vibeColor,
 }) => {
     return <div style={{
         position: "absolute",
         ...(enemy.isVibeActive ? {
-            backgroundColor: "orange",
-            borderWidth: "1px"
+            backgroundColor: vibeColor,
+            border: "1px solid black"
         } : {
-            backgroundColor: "blue",
+            backgroundColor: color,
         }),
-
         borderRadius: "50%",
-        minWidth: "5px",
-        minHeight: "5px",
+        minWidth: size,
+        minHeight: size,
         offsetAnchor: "center",
-        left: "-2.5px",
+        left: `-${size/2}px`,
         transformOrigin: "center",
         // TODO: ratio of height/width not magic number
-        transform: `translate(${Math.round((offset ?? 0) * 1000)}%, 0%)`,
+        transform: `translate(${Math.round((offset ?? 0) * (5000 / size))}%, 0%)`,
         zIndex: 2,
     }} />
 }
@@ -58,7 +62,13 @@ export const Beat = ({
     vibeDurationType,
     vibe,
     vibeOffset,
-}: Partial<BeatProps>) => {
+    showEnemyImages,
+    hitSplatColor,
+    hitSplatSize,
+    hitSplatVibeColor,
+    vibePowerShadingColor,
+    showVibePath
+}: Partial<BeatProps> & typeof defaultSettings) => {
     let finalVibeOffset
     if (vibeOffset) {
         // eliminates 0
@@ -67,26 +77,67 @@ export const Beat = ({
             finalVibeOffset = 1 - vibeOffset
         }
     }
-    const yellow = "rgba(255, 255, 0, 0.25)"
-    return <Stack className={classes.beat} mod={{ offset: vibeOffset }}>
-        <Group className={classes.track} mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}>
-            {tracks[0].map((e) => <Hit enemy={e} offset={e.partialBeatOffset} />)}
+    const backgroundImage = showVibePath && vibeDurationType === "FULL" ?
+        `linear-gradient(to left, ${vibePowerShadingColor} 100%, transparent 100%)` : undefined
+
+    return <Stack
+            className={classes.beat} mod={{ offset: vibeOffset }}>
+        <Group
+            className={classes.track}
+            mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}
+            style={{ backgroundImage }}
+        >
+            {tracks[0].map((e) => 
+                <Hit
+                    enemy={e}
+                    offset={e.partialBeatOffset}
+                    color={hitSplatColor}
+                    vibeColor={hitSplatVibeColor}
+                    useImage={showEnemyImages}
+                    size={hitSplatSize}
+                />
+            )}
         </Group>
-        <Group className={classes.track} mod={{ shaded: startBeat % 2 !== 0, vibe: vibeDurationType === "FULL"}}>
-            {tracks[1].map((e) => <Hit enemy={e} offset={e.partialBeatOffset} />)}
+        <Group
+            className={classes.track}
+            mod={{ shaded: startBeat % 2 !== 0, vibe: vibeDurationType === "FULL"}}
+            style={{ backgroundImage }}
+        >
+            {tracks[1].map((e) => 
+                <Hit
+                    enemy={e}
+                    offset={e.partialBeatOffset}
+                    color={hitSplatColor}
+                    vibeColor={hitSplatVibeColor}
+                    useImage={showEnemyImages}
+                    size={hitSplatSize}
+                />
+            )}
         </Group>
-        <Group className={classes.track} mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}>
-            {tracks[2].map((e) => <Hit enemy={e} offset={e.partialBeatOffset} />)}
+        <Group
+            className={classes.track}
+            mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}
+            style={{ backgroundImage }}
+        >
+            {tracks[2].map((e) => 
+                <Hit
+                    enemy={e}
+                    offset={e.partialBeatOffset}
+                    color={hitSplatColor}
+                    vibeColor={hitSplatVibeColor}
+                    useImage={showEnemyImages}
+                    size={hitSplatSize}
+                />
+            )}
         </Group>
-        {["START", "END"].includes(vibeDurationType) && <div style={{
+        {showVibePath && ["START", "END"].includes(vibeDurationType) && <div style={{
             position: "absolute",
             minWidth: "50px",
             minHeight: "75px",
-            backgroundImage: `linear-gradient(to left, ${yellow} 100%, transparent 100%)`,
+            backgroundImage: `linear-gradient(to left, ${vibePowerShadingColor} 100%, transparent 100%)`,
             backgroundSize: `${Math.round(finalVibeOffset * 100)}%`,
             backgroundPosition: vibeDurationType === "START" ? "right" : "left",
             backgroundRepeat: "no-repeat",
-            flexGrow: 1,
             zIndex: 1.5,
         }}/>}
     </Stack>
@@ -98,6 +149,8 @@ export const TrackDisplay = ({
     vibeData
 }) => {
 
+    const { options, setOptions } = useContext(SettingsContext)
+
 
     const processedTrackData2 = useMemo(() => processTrackData2(trackData, beatData, vibeData), [trackData, beatData, vibeData])
 
@@ -105,7 +158,13 @@ export const TrackDisplay = ({
         <>
             {/* <Expand title={"Processed Track Data"}> */}
                 <Group gap={0} className={classes.content}>
-                    {processedTrackData2?.map((beat, i) =>  <Beat key={i} {...beat} />)}
+                    {processedTrackData2?.map((beat, i) =>
+                        <Beat
+                            key={i}
+                            {...beat}
+                            {...options}
+                        />
+                    )}
                 </Group>
             {/* </Expand> */}
             <Expand title={"Track Data (original"}>

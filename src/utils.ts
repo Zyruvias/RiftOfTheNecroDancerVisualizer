@@ -74,6 +74,8 @@ const BLUE_HARPY = 8156
 const GREEN_HARPY = 8519
 const RED_ZOMBIE = 1236
 const GREEN_ZOMBIE = 1234
+const BLUE_SKULL = 3543
+const RED_SKULL = 7685
 
 const imageMap = {
     [GREEN_SLIME]: "./data/Enemies/GreenSlime/base.png",
@@ -95,6 +97,8 @@ const imageMap = {
     [YELLOW_ARMADILLO]: "./data/Enemies/YellowArmadillo/base.png",
     [BLUE_ARMADILLO]: "./data/Enemies/BlueArmadillo/base.png",
     [WHITE_SKULL]: "./data/Enemies/WhiteSkull/base.png",
+    [BLUE_SKULL]: "./data/Enemies/BlueSkull/base.png",
+    [RED_SKULL]: "./data/Enemies/RedSkull/base.png",
     [BLUE_HARPY]: "./data/Enemies/BlueHarpy/base.png",
     [GREEN_HARPY]: "./data/Enemies/GreenHarpy/base.png",
     [GREEN_ZOMBIE]: "./data/Enemies/GreenZombie/base.png",
@@ -182,6 +186,13 @@ const getEnemyHitInfo = ({ enemy, event }) => {
         case RED_ZOMBIE:
             initialTrackShift = enemy.ShouldStartFacingRight ? 2 : -2
             break
+        case BLUE_SKULL:
+            hitCount = 2
+            break
+        case RED_SKULL:
+            hitCount = 2
+            trackShift = enemy.ShouldStartFacingRight ? 1 : -1
+            break
         case GREEN_SLIME:
         case WHITE_SKELETON:
         case APPLE:
@@ -257,7 +268,7 @@ const placeEnemyOnBeatMap = ({
                 currentLocalBeatIndex += 1
             }
         }
-        if ([WHITE_SKULL].includes(enemy.EnemyId) && hitCount === 1) {
+        if ([WHITE_SKULL, RED_SKULL, BLUE_SKULL].includes(enemy.EnemyId) && hitCount === 1) {
             const spawnDirection = enemy.ShouldStartFacingRight ? -1 : 1
             const spawnBeat = Math.floor(currentRelevantBeatIndex) + 1
             const newRelevantBeat = beats[spawnBeat]

@@ -1,7 +1,8 @@
 import { createContext } from "react"
 
 export const defaultSettings = {
-    showEnemyImages: false,
+    showEnemyImages: true,
+    showBeatNumber: true,
     hitSplatSize: 5,
     showVibePath: true,
     vibePowerShadingColor: "rgba(255, 255, 0, 0.25)",

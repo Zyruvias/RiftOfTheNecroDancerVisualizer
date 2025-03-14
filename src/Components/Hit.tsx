@@ -15,7 +15,7 @@ export const Hit = ({
         left: `-${size/2}px`,
         transformOrigin: "center",
         // TODO: ratio of height/width not magic number
-        transform: translate(5),
+        transform: translate(size),
         zIndex: 2,
     } as any
     if (useImage && enemy.enemyId && enemy.image) {

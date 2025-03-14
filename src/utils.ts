@@ -66,6 +66,14 @@ const YELLOW_BAT = 717
 const BLADE_MASTER = 929
 const YELLOW_SLIME = 9189
 const DRUMSTICK = 1817
+const YELLOW_ARMADILLO = 6311
+const RED_ARMADILLO = 1707
+const BLUE_ARMADILLO = 7831
+const WHITE_SKULL = 4601
+const BLUE_HARPY = 8156
+const GREEN_HARPY = 8519
+const RED_ZOMBIE = 1236
+const GREEN_ZOMBIE = 1234
 
 const imageMap = {
     [GREEN_SLIME]: "./data/Enemies/GreenSlime/base.png",
@@ -83,6 +91,14 @@ const imageMap = {
     [BLADE_MASTER]: "./data/Enemies/RedBladeMaster/base.png",
     [YELLOW_SLIME]: "./data/Enemies/YellowSlime/base.png",
     [DRUMSTICK]: "./data/Enemies/Drumstick/base.png",
+    [RED_ARMADILLO]: "./data/Enemies/RedArmadillo/base.png",
+    [YELLOW_ARMADILLO]: "./data/Enemies/YellowArmadillo/base.png",
+    [BLUE_ARMADILLO]: "./data/Enemies/BlueArmadillo/base.png",
+    [WHITE_SKULL]: "./data/Enemies/WhiteSkull/base.png",
+    [BLUE_HARPY]: "./data/Enemies/BlueHarpy/base.png",
+    [GREEN_HARPY]: "./data/Enemies/GreenHarpy/base.png",
+    [GREEN_ZOMBIE]: "./data/Enemies/GreenZombie/base.png",
+    [RED_ZOMBIE]: "./data/Enemies/RedZombie/base.png",
 }
 
 const wyrmImageMap = {
@@ -96,6 +112,7 @@ const getEnemyHitInfo = ({ enemy, event }) => {
     let hitCount = 1
     let trackShift: number | number[] = 0
     let relevantBeatNumber = event.startBeatNumber + 9
+    let initialTrackShift = 0
 
     const enemyId = Number(enemy.EnemyId)
 
@@ -120,9 +137,7 @@ const getEnemyHitInfo = ({ enemy, event }) => {
             break
         case YELLOW_SKELETON:
             hitCount = 2
-            // relevantBeatNumber = event.startBeatNumber + 9 + Number(enemy.BladeMasterAttackRow) - 1
             break
-        
         case RED_BAT:
             hitCount = 3
             trackShift = enemy.ShouldStartFacingRight ? [1, -1] : [-1, 1]
@@ -133,23 +148,59 @@ const getEnemyHitInfo = ({ enemy, event }) => {
         case YELLOW_BAT:
             hitCount = 3
             trackShift = enemy.ShouldStartFacingRight ? 1 : -1
+            break
         case YELLOW_SLIME:
         case DRUMSTICK:
             hitCount = 3
+            break
+        case BLADE_MASTER:
+            // relevantBeatNumber = event.startBeatNumber + 9 + Number(enemy.BladeMasterAttackRow) - 1
+            break
+        case RED_ARMADILLO:
+            hitCount = 2
+            hitBeatOffset = 2/3
+            break
+        case YELLOW_ARMADILLO:
+            hitCount = 3
+            hitBeatOffset = 1/3
+            break
+        case BLUE_ARMADILLO:
+            hitCount = 2
+            hitBeatOffset = 1/3
+            break
+        case BLUE_HARPY:
+            hitCount = 2
+            hitBeatOffset = 2
+            break
+        case GREEN_HARPY:
+            hitCount = 1
+            break
+        
+        case GREEN_ZOMBIE:
+            initialTrackShift = 0
+            break
+        case RED_ZOMBIE:
+            initialTrackShift = enemy.ShouldStartFacingRight ? 2 : -2
+            break
         case GREEN_SLIME:
         case WHITE_SKELETON:
         case APPLE:
-        case BLADE_MASTER:
+        case WHITE_SKULL:
             break
         default:
-            console.log(enemyId, event)
+            console.log(event, enemy)
             break
     }
 
     return {
-        hitBeatOffset, hitCount, trackShift, relevantBeatNumber
+        hitBeatOffset, hitCount, trackShift, relevantBeatNumber, initialTrackShift
     }
 }
+
+const findEnemy = (beatObj, beat, track, offset) => 
+    beatObj.tracks[track]
+            // TODO: figure out appropriate accuracy from hitmaps to event json
+                .find((e) => equalWithinFuzz(offset, (beat % 1), 1 / 8))
 
 const placeEnemyOnBeatMap = ({
     enemy,
@@ -161,10 +212,11 @@ const placeEnemyOnBeatMap = ({
         hitCount,
         trackShift,
         relevantBeatNumber,
+        initialTrackShift
     } = getEnemyHitInfo({ enemy, event })
 
     let currentBeat = event.startBeatNumber
-    let currentTrack = event.track - 1
+    let currentTrack = (event.track - 1 + initialTrackShift + 3) % 3
     let currentRelevantBeatIndex = relevantBeatNumber
     while (hitCount > 0) {
         const relevantBeat = beats[Math.floor(currentRelevantBeatIndex)]
@@ -205,6 +257,24 @@ const placeEnemyOnBeatMap = ({
                 currentLocalBeatIndex += 1
             }
         }
+        if ([WHITE_SKULL].includes(enemy.EnemyId) && hitCount === 1) {
+            const spawnDirection = enemy.ShouldStartFacingRight ? -1 : 1
+            const spawnBeat = Math.floor(currentRelevantBeatIndex) + 1
+            const newRelevantBeat = beats[spawnBeat]
+            let spawnTrack = currentTrack
+
+            for (let i = 0; i < 2; i++) {
+                const newEnemy =
+                    newRelevantBeat.tracks[spawnTrack]
+                    // TODO: figure out appropriate accuracy from hitmaps to event json
+                        .find((e) => equalWithinFuzz(e.partialBeatOffset, (currentBeat % 1), 1 / 8))
+                if (newEnemy) {
+                    newEnemy.enemyId ??= WHITE_SKELETON
+                    newEnemy.image ??= imageMap[WHITE_SKELETON]
+                }
+                spawnTrack = (spawnTrack + 3 + spawnDirection) % 3
+            }
+        }
         if (!relevantEnemyObject) {
             return
         }
@@ -215,19 +285,12 @@ const placeEnemyOnBeatMap = ({
         }
 
         const trackShiftToPerform = trackShift?.shift?.() ?? trackShift
-            
         
-        // console.log(relevantEnemyObject.enemyId, JSON.stringify(trackShift), trackShiftToPerform, currentTrack)
         hitCount -= 1
         currentTrack = (currentTrack + 3 + trackShiftToPerform) % 3
         currentBeat += hitBeatOffset
         currentRelevantBeatIndex += hitBeatOffset
     }
-    
-
-
-
-
 }
 
 export const processTrackData2 = (trackData, beatMapData, vibePowerData: Vibe[]) => {
@@ -342,83 +405,5 @@ export const processTrackData2 = (trackData, beatMapData, vibePowerData: Vibe[])
 
     return beats
 
-
-}
-export const processTrackData = (trackData, beatMapData) => {
-    if (!trackData) {
-        return
-    }
-
-    const {
-        bpm,
-        beatDivisions,
-        events
-    } = trackData
-
-    let currentBPM = bpm
-
-
-
-    const beats: Beat[] = []
-    let i = 0
-    while (i < events.length) {
-        // process event type
-        const event = events[i]
-        const {
-            startBeatNumber,
-            endBeatNumber,
-            track,
-        } = event
-
-        const flooredBeatNumber = Math.floor(startBeatNumber)
-        const currentBeat = beats[flooredBeatNumber] ??
-            generateBeat({
-                startBeat: flooredBeatNumber,
-                bpm: currentBPM,
-            })
-
-        let enemy = {}
-
-        switch (event.type) {
-            case "SpawnEnemy":
-                // handle enemy addition to beats
-                event.dataPairs.forEach((p) => enemy[p._eventDataKey] = p._eventDataValue)
-                enemy.partialBeatOffset = startBeatNumber - flooredBeatNumber
-                currentBeat.tracks[track - 1].push(enemy)
-                break
-            case "AdjustBPM":
-                currentBPM = event.dataPairs[0]._eventDataValue
-                currentBeat.bpm = currentBPM
-                continue
-        }
-        beats[flooredBeatNumber] = currentBeat
-        i++
-    }
-
-    for (let i = 0; i < beats.length; i++) {
-        if (beats[i]) {
-            continue
-        }
-        // presume well-formed beats up to this point
-        beats[i] = generateBeat({ startBeat: i, bpm: beats[i - 1]?.bpm ?? currentBPM })
-    }
-
-    return beats
-
-
-
-    /* 
-        return structure
-        OPTION 1:
-        {
-            beats: [
-                {
-                    tracks: [
-
-                    ]
-                }
-            ]
-        }
-    */
 
 }

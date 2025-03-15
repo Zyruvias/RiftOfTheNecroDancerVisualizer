@@ -76,6 +76,9 @@ const RED_ZOMBIE = 1236
 const GREEN_ZOMBIE = 1234
 const BLUE_SKULL = 3543
 const RED_SKULL = 7685
+const BLUE_BLADEMASTER = 3685
+const BLACK_SKELETON = 2716
+const MEAT = 3211
 
 const imageMap = {
     [GREEN_SLIME]: "./data/Enemies/GreenSlime/base.png",
@@ -103,6 +106,9 @@ const imageMap = {
     [GREEN_HARPY]: "./data/Enemies/GreenHarpy/base.png",
     [GREEN_ZOMBIE]: "./data/Enemies/GreenZombie/base.png",
     [RED_ZOMBIE]: "./data/Enemies/RedZombie/base.png",
+    [BLUE_BLADEMASTER]: "./data/Enemies/BlueBlademaster/base.png",
+    [BLACK_SKELETON]: "./data/Enemies/BlackSkeleton/base.png",
+    [MEAT]: "./data/Enemies/Ham/base.png"
 }
 
 const wyrmImageMap = {
@@ -157,6 +163,8 @@ const getEnemyHitInfo = ({ enemy, event }) => {
         case DRUMSTICK:
             hitCount = 3
             break
+        case BLUE_BLADEMASTER:
+            hitCount = 2
         case BLADE_MASTER:
             // relevantBeatNumber = event.startBeatNumber + 9 + Number(enemy.BladeMasterAttackRow) - 1
             break
@@ -192,6 +200,12 @@ const getEnemyHitInfo = ({ enemy, event }) => {
         case RED_SKULL:
             hitCount = 2
             trackShift = enemy.ShouldStartFacingRight ? 1 : -1
+            break
+        case BLACK_SKELETON:
+            hitCount = 3
+            break
+        case MEAT:
+            hitCount = 4
             break
         case GREEN_SLIME:
         case WHITE_SKELETON:
@@ -231,6 +245,11 @@ const placeEnemyOnBeatMap = ({
     let currentRelevantBeatIndex = relevantBeatNumber
     while (hitCount > 0) {
         const relevantBeat = beats[Math.floor(currentRelevantBeatIndex)]
+        if (!relevantBeat?.tracks) {
+            // what is happening here
+            console.log(enemy, event, relevantBeat)
+            break
+        }
         const relevantEnemyObject =
             relevantBeat.tracks[currentTrack]
             // TODO: figure out appropriate accuracy from hitmaps to event json
@@ -244,7 +263,7 @@ const placeEnemyOnBeatMap = ({
             let currentWyrmBeat = currentBeat
             let currentLocalBeatIndex = currentRelevantBeatIndex
             while (currentWyrmBeat < event.endBeatNumber) {
-                const beatTrack = beats[Math.floor(currentLocalBeatIndex)].tracks[currentTrack]
+                const beatTrack = beats[Math.floor(currentLocalBeatIndex)]?.tracks[currentTrack] ?? []
                 if (currentWyrmBeat !== event.endBeatNumber - 1) {
                    beatTrack.unshift({
                         enemyId: WYRM,

@@ -160,13 +160,13 @@
             "value": "Deep_Blues",
             "label": "King's Ruse",
             "artist": "Danny Baranowsky",
-            "albumImage": "data/DeepBlues #11735.png"
+            "albumImage": "data/DeepBlues.png"
         },
         {
             "value": "Matron",
             "label": "What's In The Box?",
             "artist": "Danny Baranowsky",
-            "albumImage": "data/Matron #634.png"
+            "albumImage": "data/Matron.png"
         },
         {
             "value": "BraveTheHarvester",

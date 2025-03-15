@@ -7,7 +7,7 @@ import { Credits } from "./Components/Credits";
 import { Changelog } from "./Components/Changelog";
 import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data";
 import { SongDisplay } from "./Components/SongDisplay";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useLocalStorage } from "@mantine/hooks";
 import { defaultSettings, SettingsContext } from "./SettingsContext";
 import { Settings } from "./Components/Settings";
 
@@ -20,12 +20,20 @@ const DIFFICULTIES = [
 ];
 
 function App() {
-  const [track, setTrack] = useState(TRACK_LIST[0]);
+  const [track, setTrack] = useLocalStorage({
+    key: 'selectedTrack',
+    defaultValue: TRACK_LIST[0]
+  });
+  const [difficulty, setDifficulty] = useLocalStorage({
+    key: 'selectedDifficulty',
+    defaultValue: DIFFICULTIES[0]
+  });
+  const [options, setOptions] = useLocalStorage({
+    key: 'applicationSettings',
+    defaultValue: defaultSettings
+  })
   const [trackData, setTrackData] = useState(null);
   const [beatData, setBeatData] = useState(null);
-  const [difficulty, setDifficulty] = useState(DIFFICULTIES[0]);
-
-  const [options, setOptions] = useState(defaultSettings)
 
   const [navbarOpen, { toggle }] = useDisclosure(true)
   useEffect(() => {

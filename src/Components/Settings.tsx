@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import {
     Button,
     Checkbox,
@@ -15,10 +15,11 @@ import { SettingsContext, defaultSettings} from "../SettingsContext"
 export const Settings = ({}) => {
     const [opened, { open, close }] = useDisclosure()
     const { options, setOptions } = useContext(SettingsContext)
+    const [tempSettings, setTempSettings] = useState(options)
 
     // TODO: patch real options at close not live
     const setOptionProperty = (prop: keyof typeof defaultSettings, value) => {
-        setOptions((old) => {
+        setTempSettings((old) => {
             console.log("Changing", prop, "to", value)
             return {
                 ...old,
@@ -27,18 +28,32 @@ export const Settings = ({}) => {
         })
     }
 
+    const applySettings = () => {
+        setOptions(tempSettings)
+    }
+
+    const onClose = () => {
+        close()
+        applySettings()
+    }
+
     return <>
-        <Modal opened={opened} onClose={close} title={"Settings"}>
+        <Modal opened={opened} onClose={onClose} title={"Settings"}>
             <Stack gap="sm">
                 <Checkbox
-                    label={"Show Enemy Images"}
+                    label={"Show Enemy Images (Beta)"}
                     onChange={(event) => setOptionProperty("showEnemyImages", event.target.checked)}
-                    checked={options.showEnemyImages}
+                    checked={tempSettings.showEnemyImages}
                 />
                 <Checkbox
                     label={"Show Optimal Vibe Path"}
                     onChange={(event) => setOptionProperty("showVibePath", event.target.checked)}
-                    checked={options.showVibePath}
+                    checked={tempSettings.showVibePath}
+                />
+                <Checkbox
+                    label={"Show Beat Number"}
+                    onChange={(event) => setOptionProperty("showBeatNumber", event.target.checked)}
+                    checked={tempSettings.showBeatNumber}
                 />
                 <Input.Wrapper
                     label="Hit Size"
@@ -47,7 +62,7 @@ export const Settings = ({}) => {
                         min={5}
                         max={20}
                         step={1}
-                        label={options.hitSplatSize}
+                        label={tempSettings.hitSplatSize}
                         marks={[
                             {value: 5, label: 5},
                             {value: 20, label: 20}
@@ -58,14 +73,14 @@ export const Settings = ({}) => {
                 <ColorInput
                     label="Hit Color"
                     description={"Used when \"Show Enemy Images\" is disabled"}
-                    value={options.hitSplatColor}
+                    value={tempSettings.hitSplatColor}
                     onChange={(value) => setOptionProperty("hitSplatColor", value)}
 
                 />
                 <ColorInput
                     label="Vibe Power Hit Color"
                     description={"Used when \"Show Enemy Images\" is disabled and vibe power is active"}
-                    value={options.hitSplatVibeColor}
+                    value={tempSettings.hitSplatVibeColor}
                     onChange={(value) => setOptionProperty("hitSplatVibeColor", value)}
 
                     
@@ -73,11 +88,12 @@ export const Settings = ({}) => {
                 <ColorInput
                     label="Vibe Power Shading Color"
                     description={"Used to shade the beats where vibe power is active"}
-                    value={options.vibePowerShadingColor}
+                    value={tempSettings.vibePowerShadingColor}
                     onChange={(value) => setOptionProperty("vibePowerShadingColor", value)}
                     format="hexa"
                     
                 />
+                <Button onClick={applySettings}>Apply</Button>
             </Stack>
         </Modal>
         <Button onClick={open}>

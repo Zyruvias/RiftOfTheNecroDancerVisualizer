@@ -5,6 +5,7 @@ import { useDisclosure } from '@mantine/hooks'
 import classes from "./TrackDisplay.module.css"
 import type { Beat as BeatProps } from "../utils"
 import { defaultSettings, SettingsContext } from "../SettingsContext"
+import { Hit } from "./Hit";
 
 
 const Expand = ({ children, title, boxStyle }) => {
@@ -28,34 +29,6 @@ const Expand = ({ children, title, boxStyle }) => {
   );
 }
 
-export const Hit = ({
-    offset,
-    enemy,
-    color,
-    useImage,
-    size,
-    vibeColor,
-}) => {
-    return <div style={{
-        position: "absolute",
-        ...(enemy.isVibeActive ? {
-            backgroundColor: vibeColor,
-            border: "1px solid black"
-        } : {
-            backgroundColor: color,
-        }),
-        borderRadius: "50%",
-        minWidth: size,
-        minHeight: size,
-        offsetAnchor: "center",
-        left: `-${size/2}px`,
-        transformOrigin: "center",
-        // TODO: ratio of height/width not magic number
-        transform: `translate(${Math.round((offset ?? 0) * (5000 / size))}%, 0%)`,
-        zIndex: 2,
-    }} />
-}
-
 export const Beat = ({
     startBeat,
     tracks,
@@ -67,7 +40,8 @@ export const Beat = ({
     hitSplatSize,
     hitSplatVibeColor,
     vibePowerShadingColor,
-    showVibePath
+    showVibePath,
+    showBeatNumber,
 }: Partial<BeatProps> & typeof defaultSettings) => {
     let finalVibeOffset
     if (vibeOffset) {
@@ -80,66 +54,69 @@ export const Beat = ({
     const backgroundImage = showVibePath && vibeDurationType === "FULL" ?
         `linear-gradient(to left, ${vibePowerShadingColor} 100%, transparent 100%)` : undefined
 
-    return <Stack
-            className={classes.beat} mod={{ offset: vibeOffset }}>
-        <Group
-            className={classes.track}
-            mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}
-            style={{ backgroundImage }}
-        >
-            {tracks[0].map((e) => 
-                <Hit
-                    enemy={e}
-                    offset={e.partialBeatOffset}
-                    color={hitSplatColor}
-                    vibeColor={hitSplatVibeColor}
-                    useImage={showEnemyImages}
-                    size={hitSplatSize}
-                />
-            )}
-        </Group>
-        <Group
-            className={classes.track}
-            mod={{ shaded: startBeat % 2 !== 0, vibe: vibeDurationType === "FULL"}}
-            style={{ backgroundImage }}
-        >
-            {tracks[1].map((e) => 
-                <Hit
-                    enemy={e}
-                    offset={e.partialBeatOffset}
-                    color={hitSplatColor}
-                    vibeColor={hitSplatVibeColor}
-                    useImage={showEnemyImages}
-                    size={hitSplatSize}
-                />
-            )}
-        </Group>
-        <Group
-            className={classes.track}
-            mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}
-            style={{ backgroundImage }}
-        >
-            {tracks[2].map((e) => 
-                <Hit
-                    enemy={e}
-                    offset={e.partialBeatOffset}
-                    color={hitSplatColor}
-                    vibeColor={hitSplatVibeColor}
-                    useImage={showEnemyImages}
-                    size={hitSplatSize}
-                />
-            )}
-        </Group>
-        {showVibePath && ["START", "END"].includes(vibeDurationType) && <div style={{
-            position: "absolute",
-            minWidth: "50px",
-            minHeight: "75px",
-            backgroundImage: `linear-gradient(to left, ${vibePowerShadingColor} 100%, transparent 100%)`,
-            backgroundSize: `${Math.round(finalVibeOffset * 100)}%`,
-            backgroundPosition: vibeDurationType === "START" ? "right" : "left",
-            backgroundRepeat: "no-repeat",
-            zIndex: 1.5,
-        }}/>}
+    return <Stack gap={0}>
+        {showBeatNumber && <span style={{ fontSize: "0.8rem"}}>{startBeat + 1}</span>}
+        <Stack
+                className={classes.beat} mod={{ offset: vibeOffset }}>
+            <Group
+                className={classes.track}
+                mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}
+                style={{ backgroundImage }}
+            >
+                {tracks[0].map((e) => 
+                    <Hit
+                        enemy={e}
+                        offset={e.partialBeatOffset}
+                        color={hitSplatColor}
+                        vibeColor={hitSplatVibeColor}
+                        useImage={showEnemyImages}
+                        size={hitSplatSize}
+                    />
+                )}
+            </Group>
+            <Group
+                className={classes.track}
+                mod={{ shaded: startBeat % 2 !== 0, vibe: vibeDurationType === "FULL"}}
+                style={{ backgroundImage }}
+            >
+                {tracks[1].map((e) => 
+                    <Hit
+                        enemy={e}
+                        offset={e.partialBeatOffset}
+                        color={hitSplatColor}
+                        vibeColor={hitSplatVibeColor}
+                        useImage={showEnemyImages}
+                        size={hitSplatSize}
+                    />
+                )}
+            </Group>
+            <Group
+                className={classes.track}
+                mod={{ shaded: startBeat % 2 === 0, vibe: vibeDurationType === "FULL"}}
+                style={{ backgroundImage }}
+            >
+                {tracks[2].map((e) => 
+                    <Hit
+                        enemy={e}
+                        offset={e.partialBeatOffset}
+                        color={hitSplatColor}
+                        vibeColor={hitSplatVibeColor}
+                        useImage={showEnemyImages}
+                        size={hitSplatSize}
+                    />
+                )}
+            </Group>
+            {showVibePath && ["START", "END"].includes(vibeDurationType) && <div style={{
+                position: "absolute",
+                minWidth: "50px",
+                minHeight: "75px",
+                backgroundImage: `linear-gradient(to left, ${vibePowerShadingColor} 100%, transparent 100%)`,
+                backgroundSize: `${Math.round(finalVibeOffset * 100)}%`,
+                backgroundPosition: vibeDurationType === "START" ? "right" : "left",
+                backgroundRepeat: "no-repeat",
+                zIndex: 1.5,
+            }}/>}
+        </Stack>
     </Stack>
 }
 

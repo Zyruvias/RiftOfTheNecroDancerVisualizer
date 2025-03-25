@@ -1,33 +1,11 @@
 import React, { useContext, useMemo } from "react"
 import { Button, Group, Collapse, Box, Stack, AccordionChevron, Code, Center } from '@mantine/core';
-import { processTrackData2 } from "../utils"
+import { processTrackData2, processTrackData3 } from "../utils"
 import { useDisclosure } from '@mantine/hooks'
 import classes from "./TrackDisplay.module.css"
 import type { Beat as BeatProps } from "../utils"
 import { defaultSettings, SettingsContext } from "../SettingsContext"
 import { Hit } from "./Hit";
-
-
-const Expand = ({ children, title, boxStyle }) => {
-  const [opened, { toggle }] = useDisclosure(false)
-
-  return (
-    <Box mx="auto" m={50}>
-      <Group justify="center" mb={5} p={5}>
-        <Button
-            onClick={toggle}
-            rightSection={<AccordionChevron/>}
-        >
-            {title}
-        </Button>
-      </Group>
-
-      <Collapse in={opened} style={boxStyle}>
-        {children}
-      </Collapse>
-    </Box>
-  );
-}
 
 export const Beat = ({
     startBeat,
@@ -123,39 +101,25 @@ export const Beat = ({
 export const TrackDisplay = ({
     trackData,
     beatData,
-    vibeData
+    vibeData,
+    hitmapData
 }) => {
 
     const { options, setOptions } = useContext(SettingsContext)
 
 
     const processedTrackData2 = useMemo(() => processTrackData2(trackData, beatData, vibeData), [trackData, beatData, vibeData])
+    const processedTrackData3 = useMemo(() => processTrackData3(hitmapData, vibeData), [hitmapData, vibeData])
 
     return (
-        <>
-            {/* <Expand title={"Processed Track Data"}> */}
-                <Group gap={0} className={classes.content}>
-                    {processedTrackData2?.map((beat, i) =>
-                        <Beat
-                            key={i}
-                            {...beat}
-                            {...options}
-                        />
-                    )}
-                </Group>
-            {/* </Expand> */}
-            <Expand title={"Track Data (original"}>
-                <Center>
-                    <Group align="top" mah={"40hv"} preventGrowOverflow>
-                        <Code block>
-                            {beatData}
-                        </Code>
-                        <Code block>
-                            {JSON.stringify(trackData, null, 2)}
-                        </Code>
-                    </Group>
-                </Center>
-            </Expand>
-        </>
+        <Group gap={0} className={classes.content}>
+            {processedTrackData3?.map((beat, i) =>
+                <Beat
+                    key={i}
+                    {...beat}
+                    {...options}
+                />
+            )}
+        </Group>
     )
 }

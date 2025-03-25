@@ -280,7 +280,7 @@ const placeEnemyOnBeatMap = ({
                         partialBeatOffset: currentLocalBeatIndex - Math.floor(currentLocalBeatIndex),
                         transform: "rotate(90deg)",
                         height: 50,
-                        left: 20,
+                        left: 25,
                     })
                 }
                 currentWyrmBeat += 1
@@ -431,6 +431,140 @@ export const processTrackData2 = (trackData, beatMapData, vibePowerData: Vibe[])
         
         
         // break
+    }
+
+    return beats
+
+
+}
+
+export const processTrackData3 = (hitmapData, vibeData) => {
+    console.log("process track data 3")
+    if (!hitmapData || !vibeData) {
+        return
+    }
+    // console.log(trackData, beatMapData, vibePowerData)
+
+    const generateBeat = ({ startBeat, ...rest }): Partial<Beat> => {
+        return {
+            ...rest,
+            startBeat,
+            tracks: [
+                [],
+                [],
+                [],
+            ]
+        }
+    }
+
+    let currentVibeIndex = 0
+    let monsterHitCount = 0
+
+    let vibePowerActive = false
+
+    const beats: Beat[] = []
+    const enemyMap = {}
+    for (const event of hitmapData.events) {
+        if (event.Event !== "HitEnemy") {
+            continue // TODO: figure this out
+        }
+        /* 
+            "GUID": "6a4e7c74-ebf8-4a39-a65d-045b3e86aebb",
+            "ID": "929",
+            "Facing": "Left",
+            "Health": "1",
+            "X": "1",
+            "Y": "0",
+            "Beat": "13",
+            "Time": "3.75",
+            "Spawn": "5",
+            "Vibe": "False",
+            "Burning": "False",
+            "Mysterious": "False",
+            "Event": "HitEnemy"
+        */
+        const {
+            GUID: guid,
+            ID: id,
+            X: x,
+            Y: Y,
+            Time: time,
+            Beat: beat,
+            Facing: facingDirection,
+            Health: health,
+            Vibe: isVibePhraseEnemy
+        } = event
+
+        const flooredBeatNumber = Math.floor(beat)
+        const currentBeat = beats[flooredBeatNumber] ??
+            generateBeat({
+                startBeat: flooredBeatNumber,
+            })
+
+        const currentVibe = vibeData[currentVibeIndex] ?? {}        // current hits between start combo and vibe enemy expectation sum
+        vibePowerActive = currentVibe.combo + currentVibe.enemies > monsterHitCount &&  
+            monsterHitCount >= currentVibe.combo
+        // vibe power is activated BEFORE the next hit
+        if (vibePowerActive) {
+            currentBeat.vibe = currentVibe
+            // first hit, assign "START"
+            if (monsterHitCount === currentVibe.combo) {
+                currentBeat.vibeDurationType = "START"
+                currentBeat.vibeOffset = beat - flooredBeatNumber
+            } else if (currentBeat.vibeDurationType === undefined) {
+                // if we don't have a type it means we are on a new beat
+                // so we assign "FULL"
+                currentBeat.vibeDurationType = "FULL"
+            }
+        } else {
+
+        }
+        // assume we hit the monster. HIT THE MONSTER
+        let enemy = enemyMap[guid]
+        if (!enemy) {
+            enemy =  {
+                partialBeatOffset: beat - flooredBeatNumber,
+                isVibeActive: vibePowerActive,
+                enemyId: id,
+                image: imageMap[id],
+                beat,
+                guid,
+                health, // TODO: multi-hit makes this stale
+            }
+            enemyMap[guid] = enemy
+        }
+        if (guid === "7f9230b8-cc56-4ba7-8f28-f56802c05c63") {
+            console.log("event with specified guid")
+        }
+        currentBeat.tracks[x]?.push(enemy)
+        monsterHitCount += 1
+        // post-hit processing, denote end of vibe path
+        if (monsterHitCount === currentVibe.combo + currentVibe.enemies) {
+            currentBeat.vibeDurationType = "END"
+            currentBeat.vibe = currentVibe
+            currentBeat.vibeOffset = beat - flooredBeatNumber
+        }
+
+        // past relevant combo for vibe, go next
+        if (monsterHitCount > currentVibe.combo + currentVibe.enemies) {
+            currentVibeIndex += 1
+        }
+
+
+        beats[flooredBeatNumber] = currentBeat
+
+    }
+    
+    for (let i = 0; i < beats.length; i++) {
+        if (beats[i]) {
+            continue
+        }
+        // presume well-formed beats up to this point
+        const vibeDurationType = ["START", "FULL"].includes(beats[i - 1]?.vibeDurationType) ? "FULL" : "NONE"
+        beats[i] = generateBeat({
+            startBeat: i,
+            vibeDurationType,
+        })
     }
 
     return beats

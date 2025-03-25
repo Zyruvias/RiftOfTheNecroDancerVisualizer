@@ -2,14 +2,21 @@ import React, { useEffect, useState } from "react";
 import { Anchor, AppShell, Burger, Button, Center, Group, Select, Stack, Title, Tooltip } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { TrackDisplay } from "./Components/TrackDisplay";
-import { getVibePathForTrackAndDifficulty, useVibePowerPaths } from "./queries";
+import {
+  TRACK_LIST,
+  getTrack,
+  getTrackBeatMap,
+  getVibePathForTrackAndDifficulty,
+  useTrackData,
+  useVibePowerPaths
+} from "./queries";
 import { Credits } from "./Components/Credits";
 import { Changelog } from "./Components/Changelog";
-import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data";
 import { SongDisplay } from "./Components/SongDisplay";
 import { useDisclosure, useLocalStorage } from "@mantine/hooks";
 import { defaultSettings, SettingsContext } from "./SettingsContext";
 import { Settings } from "./Components/Settings";
+import { PortalTooltip } from "./Components/PortalTooltip";
 
 
 const DIFFICULTIES = [
@@ -46,6 +53,8 @@ function App() {
     fetchData();
   }, [track, difficulty]);
 
+  const newTrackData = useTrackData(track, difficulty)
+
   const vibePowerQuery = useVibePowerPaths();
 
   const vibePowerDataForTrack = getVibePathForTrackAndDifficulty(
@@ -67,9 +76,11 @@ function App() {
     }
     setDifficulty(option);
   };
+
   return (
     <>
       <SettingsContext.Provider value={{ options, setOptions }}>
+      <PortalTooltip>
         <AppShell
           header={{ height: 48 }}
           navbar={{
@@ -133,12 +144,14 @@ function App() {
               />
             </Center>
             <TrackDisplay
+              hitmapData={newTrackData.data}
               trackData={trackData}
               beatData={beatData}
               vibeData={vibePowerDataForTrack}
             />
           </AppShell.Main>
         </AppShell>
+        </PortalTooltip>
       </SettingsContext.Provider>
     </>
   );

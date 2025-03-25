@@ -3,6 +3,49 @@ import { useQuery } from "@tanstack/react-query"
 const SHEET_ID = "1-bOc-4td8X17ZW-5FdDVhQmCirQDIToFuaPfWadXA9Q"
 const SHEET_NAME = "Sheet1" // fragile?
 
+import { tracks } from "./data/TrackList.json"
+
+export const TRACK_LIST = tracks
+
+// TODO: track files should just be renamed but I got lazy
+export const getTrack = async (track, difficulty) => {
+    try {
+        return await import(`./data/Charts/${difficulty.label}-RhythmRift_${track.value}_${difficulty.value}.json`)
+    } catch (e) {
+        console.warn(e)
+        return await import(`./data/Charts/${difficulty.label}-RhythmRift_${track.value}_${difficulty.value}_DoubleSpeed.json`)
+    }
+}
+
+const diffMap = {
+    "Easy": 1,
+    "Medium": 2,
+    "Hard": 3,
+    "Impossible": 4,
+}
+
+const getTrackData = async (track, difficulty) => {
+    return await import(`./data/HitMapsV2/${track.hitMap}-${diffMap[difficulty.value]}.json`)
+}
+
+export const useTrackData = (track, difficulty) =>
+    useQuery({
+        queryKey: [track.value, difficulty],
+        staleTime: Infinity,
+        queryFn: () => getTrackData(track, difficulty)
+    })
+
+export const getTrackBeatMap = async (track, difficulty) => {
+    const beatmapName = track.value.replace(/'|_|\s+/g, "")
+    
+    try {
+        const data =  await fetch(`data/HitMaps/all_${difficulty.label.toLowerCase()}/RR${beatmapName}.txt?url`)
+        return await data.text()
+    } catch (e) {
+        console.error(track, difficulty, e)
+    }
+}
+
 const getVibePowerValues = async () => {
     try {
         const result = await fetch(`https://opensheet.elk.sh/${SHEET_ID}/${SHEET_NAME}`)

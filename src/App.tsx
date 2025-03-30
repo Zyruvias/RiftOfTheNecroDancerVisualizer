@@ -23,8 +23,10 @@ const DIFFICULTIES = [
   { value: "Easy", label: "Easy" },
   { value: "Medium", label: "Medium" },
   { value: "Hard", label: "Hard" },
-  { value: "Expert", label: "Impossible" },
+  { value: "Impossible", label: "Impossible" },
 ];
+
+// const useStateAndLocalStorage = ({ key, defaultValue })
 
 function App() {
   const [track, setTrack] = useLocalStorage({
@@ -40,14 +42,11 @@ function App() {
     defaultValue: defaultSettings
   })
   const [trackData, setTrackData] = useState(null);
-  const [beatData, setBeatData] = useState(null);
 
   const [navbarOpen, { toggle }] = useDisclosure(true)
   useEffect(() => {
     const fetchData = async () => {
       const data = await getTrack(track, difficulty);
-      const beatData = await getTrackBeatMap(track, difficulty);
-      setBeatData(beatData);
       setTrackData(data);
     };
     fetchData();
@@ -146,7 +145,6 @@ function App() {
             <TrackDisplay
               hitmapData={newTrackData.data}
               trackData={trackData}
-              beatData={beatData}
               vibeData={vibePowerDataForTrack}
             />
           </AppShell.Main>

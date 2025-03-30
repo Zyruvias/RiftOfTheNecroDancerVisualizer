@@ -6,6 +6,7 @@ const SHEET_NAME = "Sheet1" // fragile?
 import { tracks } from "./data/TrackList.json"
 
 export const TRACK_LIST = tracks
+const CURRENT_DATA_VERSION = "v1.2.4"
 
 // TODO: track files should just be renamed but I got lazy
 export const getTrack = async (track, difficulty) => {
@@ -28,11 +29,24 @@ const getTrackData = async (track, difficulty) => {
     return await import(`./data/HitMapsV2/${track.hitMap}-${diffMap[difficulty.value]}.json`)
 }
 
+const BASE_URL = "https://raw.githubusercontent.com/KayDeeTee/RotN-Hitmapper"
+
+const getTrackData2 = async (track, difficulty) => {
+    const response = await fetch(
+        `${BASE_URL}/refs/tags/${CURRENT_DATA_VERSION}/Charts/${track.hitMap}-${diffMap[difficulty.value]}.json`)
+    const json = await response.json()
+    console.log(json)
+    return json
+}
+
+export const albumImageURL = (song) =>  `${BASE_URL}/refs/tags/${CURRENT_DATA_VERSION}/AlbumArts/${song}`
+
+
 export const useTrackData = (track, difficulty) =>
     useQuery({
         queryKey: [track.value, difficulty],
         staleTime: Infinity,
-        queryFn: () => getTrackData(track, difficulty)
+        queryFn: () => getTrackData2(track, difficulty)
     })
 
 export const getTrackBeatMap = async (track, difficulty) => {

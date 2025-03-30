@@ -100,15 +100,13 @@ export const Beat = ({
 
 export const TrackDisplay = ({
     trackData,
-    beatData,
     vibeData,
     hitmapData
 }) => {
 
-    const { options, setOptions } = useContext(SettingsContext)
+    const { options } = useContext(SettingsContext)
 
 
-    const processedTrackData2 = useMemo(() => processTrackData2(trackData, beatData, vibeData), [trackData, beatData, vibeData])
     const processedTrackData3 = useMemo(() => processTrackData3(hitmapData, vibeData), [hitmapData, vibeData])
 
     return (

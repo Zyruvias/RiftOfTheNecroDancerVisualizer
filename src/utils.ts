@@ -533,9 +533,6 @@ export const processTrackData3 = (hitmapData, vibeData) => {
             }
             enemyMap[guid] = enemy
         }
-        if (guid === "7f9230b8-cc56-4ba7-8f28-f56802c05c63") {
-            console.log("event with specified guid")
-        }
         currentBeat.tracks[x]?.push(enemy)
         monsterHitCount += 1
         // post-hit processing, denote end of vibe path

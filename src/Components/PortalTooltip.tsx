@@ -15,7 +15,6 @@ export const PortalTooltip = ({ children }) => {
     const [content, setContent] = useState<ReactElement>()
 
     const bb = target?.getBoundingClientRect()
-    console.log(bb, content)
 
     useEffect(() => {
         highlightSharedGuidEnemies()

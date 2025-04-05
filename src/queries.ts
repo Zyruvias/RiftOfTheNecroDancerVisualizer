@@ -35,7 +35,6 @@ const getTrackData2 = async (track, difficulty) => {
     const response = await fetch(
         `${BASE_URL}/refs/tags/${CURRENT_DATA_VERSION}/Charts/${track.hitMap}-${diffMap[difficulty.value]}.json`)
     const json = await response.json()
-    console.log(json)
     return json
 }
 
@@ -142,7 +141,6 @@ export type Release = {
 const getReleaseNotes = async (): Promise<Release[]> => {
     const results = await fetch("https://api.github.com/repos/Zyruvias/RiftOfTheNecroDancerVisualizer/releases")
     const json = await results.json()
-    console.log(json)
     return json
 }
 

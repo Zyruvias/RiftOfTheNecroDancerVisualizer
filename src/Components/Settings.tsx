@@ -17,10 +17,9 @@ export const Settings = ({}) => {
     const { options, setOptions } = useContext(SettingsContext)
     const [tempSettings, setTempSettings] = useState(options)
 
-    // TODO: patch real options at close not live
     const setOptionProperty = (prop: keyof typeof defaultSettings, value) => {
         setTempSettings((old) => {
-            console.log("Changing", prop, "to", value)
+            // console.log("Changing", prop, "to", value)
             return {
                 ...old,
                 [prop]: value,

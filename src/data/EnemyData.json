@@ -7,17 +7,17 @@
     "4355": {
         "name": "BlueSlime",
         "id": 4355,
-        "image": "./data/Enemies/GreenSlime/base.png"
+        "image": "./data/Enemies/BlueSlime/base.png"
     },
     "9189": {
         "name": "YellowSlime",
         "id": 9189,
-        "image": "./data/Enemies/GreenSlime/base.png"
+        "image": "./data/Enemies/YellowSlime/base.png"
     },
     "2202": {
         "name": "WhiteSkeleton",
         "id": 2202,
-        "image": "./data/Enemies/GreenSlime/base.png"
+        "image": "./data/Enemies/WhiteSkeleton/base.png"
     },
     "1911": {
         "name": "WhiteSkeletonShield",

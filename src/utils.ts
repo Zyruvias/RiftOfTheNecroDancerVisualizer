@@ -71,7 +71,6 @@ export const processTrackData3 = (hitmapData, vibeData) => {
             Facing: facingDirection,
             Health: health,
             Vibe,
-            Event: eventName
         } = event
 
         // conver to bool
@@ -86,8 +85,8 @@ export const processTrackData3 = (hitmapData, vibeData) => {
             })
         // current hits between start combo and vibe enemy expectation sum
         const currentVibe = vibeData[currentVibeIndex] ?? {}
-        vibePowerActive = currentVibe.combo + currentVibe.enemies > monsterHitCount &&  
-            monsterHitCount >= currentVibe.combo
+        vibePowerActive = (currentBeat.startBeat + 1) >= currentVibe.beat &&
+            currentVibe.combo + currentVibe.enemies > monsterHitCount
         // vibe power is activated BEFORE the next hit
         if (vibePowerActive) {
             currentBeat.vibe = currentVibe
@@ -125,14 +124,14 @@ export const processTrackData3 = (hitmapData, vibeData) => {
             // enemy.left = 20
             enemy.transform = "rotate(90deg)"
         }
-        if (eventName === "WyrmSection") {
+        if (event.Event === "WyrmSection") {
             enemy.image = enemyData[8079].image
             enemy.height = 50
             enemy.left = "-50%"
             enemy.zIndex = 1.5
         }
         currentBeat.tracks[x]?.push({ ... enemy})
-        if (eventName === "HitEnemy") {
+        if (event.Event === "HitEnemy") {
             monsterHitCount += 1
         }
         // post-hit processing, denote end of vibe path

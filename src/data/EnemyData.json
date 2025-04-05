@@ -1,0 +1,177 @@
+{
+    "1722": {
+        "name": "GreenSlime",
+        "id": 1722,
+        "image": "./data/Enemies/GreenSlime/base.png"
+    },
+    "4355": {
+        "name": "BlueSlime",
+        "id": 4355,
+        "image": "./data/Enemies/GreenSlime/base.png"
+    },
+    "9189": {
+        "name": "YellowSlime",
+        "id": 9189,
+        "image": "./data/Enemies/GreenSlime/base.png"
+    },
+    "2202": {
+        "name": "WhiteSkeleton",
+        "id": 2202,
+        "image": "./data/Enemies/GreenSlime/base.png"
+    },
+    "1911": {
+        "name": "WhiteSkeletonShield",
+        "id": 1911,
+        "image": "./data/Enemies/WhiteSkeletonShield/base.png"
+    },
+    "6803": {
+        "name": "YellowSkeleton",
+        "id": 6803,
+        "image": "./data/Enemies/YellowSkeleton/base.png"
+    },
+    "4871": {
+        "name": "Yellow Shield Skeleton",
+        "id": 4871,
+        "image": "./data/Enemies/YellowSkeletonShield/base.png"
+    },
+    "2716": {
+        "name": "Black Skeleton",
+        "id": 2716,
+        "image": "./data/Enemies/BlackSkeleton/base.png"
+    },
+    "3307": {
+        "name": "Black Shield Skeleton",
+        "id": 3307,
+        "image": "./data/Enemies/BlackSkeletonShield/base.png"
+    },
+    "6471": {
+        "name": "Triple Shield Skeleton",
+        "id": 6471,
+        "image": "./data/Enemies/WhiteSkeletonDoubleShield/base.png"
+    },
+    "7794": {
+        "name": "Wyrm",
+        "id": 7794,
+        "image": "./data/Enemies/Wyrm/base.png"
+    },
+    "8079": {
+        "name": "WyrmBody",
+        "id": 8079,
+        "image": "./data/Enemies/Wyrm/body.png"
+    },
+    "9888": {
+        "name": "WyrmTail",
+        "id": 9888,
+        "image": "./data/Enemies/Wyrm/tail.png"
+    },
+    "8675309": {
+        "name": "BlueBat",
+        "id": 8675309,
+        "image": "./data/Enemies/BlueBat/base.png"
+    },
+    "717": {
+        "name": "YellowBat",
+        "id": 717,
+        "image": "./data/Enemies/YellowBat/base.png"
+    },
+    "911": {
+        "name": "RedBat",
+        "id": 911,
+        "image": "./data/Enemies/RedBat/base.png"
+    },
+    "8519": {
+        "name": "Harpy",
+        "id": 8519,
+        "image": "./data/Enemies/GreenHarpy/base.png"
+    },
+    "3826": {
+        "name": "RedHarpy",
+        "id": 3826,
+        "image": "./data/Enemies/RedHarpy/base.png"
+    },
+    "8156": {
+        "name": "BlueHarpy",
+        "id": 8156,
+        "image": "./data/Enemies/BlueHarpy/base.png"
+    },
+    "929": {
+        "name": "Blademaster",
+        "id": 929,
+        "image": "./data/Enemies/RedBladeMaster/base.png"
+    },
+    "3685": {
+        "name": "BlueBlademaster",
+        "id": 3685,
+        "image": "./data/Enemies/BlueBladeMaster/base.png"
+    },
+    "7288": {
+        "name": "YellowBlademaster",
+        "id": 7288,
+        "image": "./data/Enemies/YellowBladeMaster/base.png"
+    },
+    "4601": {
+        "name": "WhiteSkull",
+        "id": 4601,
+        "image": "./data/Enemies/WhiteSkull/base.png"
+    },
+    "3543": {
+        "name": "BlueSkull",
+        "id": 3543,
+        "image": "./data/Enemies/BlueSkull/base.png"
+    },
+    "7685": {
+        "name": "RedSkull",
+        "id": 7685,
+        "image": "./data/Enemies/RedSkull/base.png"
+    },
+    "1234": {
+        "name": "GreenZombie",
+        "id": 1234,
+        "image": "./data/Enemies/GreenZombie/base.png"
+    },
+    "1235": {
+        "name": "BlueZombie",
+        "id": 1235,
+        "image": "./data/Enemies/BlueZombie/base.png"
+    },
+    "1236": {
+        "name": "RedZombie",
+        "id": 1236,
+        "image": "./data/Enemies/RedZombie/base.png"
+    },
+    "2054": {
+        "name": "Cheese",
+        "id": 2054,
+        "image": "./data/Enemies/Cheese/base.png"
+    },
+    "7358": {
+        "name": "Apple",
+        "id": 7358,
+        "image": "./data/Enemies/Apple/base.png"
+    },
+    "1817": {
+        "name": "Drumstick",
+        "id": 1817,
+        "image": "./data/Enemies/Drumstick/base.png"
+    },
+    "3211": {
+        "name": "Ham",
+        "id": 3211,
+        "image": "./data/Enemies/Ham/base.png"
+    },
+    "7831": {
+        "name": "BlueArmadillo",
+        "id": 7831,
+        "image": "./data/Enemies/BlueArmadillo/base.png"
+    },
+    "6311": {
+        "name": "YellowArmadillo",
+        "id": 6311,
+        "image": "./data/Enemies/YellowArmadillo/base.png"
+    },
+    "1707": {
+        "name": "Red Armadillo",
+        "id": 1707,
+        "image": "./data/Enemies/RedArmadillo/base.png"
+    }
+}

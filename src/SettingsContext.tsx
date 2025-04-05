@@ -5,6 +5,7 @@ export const defaultSettings = {
     showBeatNumber: true,
     hitSplatSize: 5,
     showVibePath: true,
+    useReducedMotion: false,
     vibePowerShadingColor: "rgba(255, 255, 0, 0.25)",
     hitSplatVibeColor: "#FFAA00",
     hitSplatColor: "#0000FF"

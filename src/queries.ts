@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
-
+// this points to a copy that imports the sheet and flattens headers
 const SHEET_ID = "1-bOc-4td8X17ZW-5FdDVhQmCirQDIToFuaPfWadXA9Q"
-const SHEET_NAME = "Sheet1" // fragile?
+const SHEET_NAME = "Sheet1"
 
 import { tracks } from "./data/TrackList.json"
 
@@ -64,6 +64,10 @@ const getVibePowerValues = async () => {
     try {
         const result = await fetch(`https://opensheet.elk.sh/${SHEET_ID}/${SHEET_NAME}`)
         const res = await result.json()
+        if (res.error) {
+            console.warn(res.error)
+            return []
+        }
         return res
     } catch (e) {
         console.error(e)

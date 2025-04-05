@@ -1,7 +1,6 @@
-import React, { useContext, useMemo } from "react"
-import { Button, Group, Collapse, Box, Stack, AccordionChevron, Code, Center } from '@mantine/core';
-import { processTrackData2, processTrackData3 } from "../utils"
-import { useDisclosure } from '@mantine/hooks'
+import React, { useContext, useEffect, useMemo, useState } from "react"
+import { Group, Stack, AccordionChevron, Code, Center, Flex } from '@mantine/core';
+import { processTrackData3 } from "../utils"
 import classes from "./TrackDisplay.module.css"
 import type { Beat as BeatProps } from "../utils"
 import { defaultSettings, SettingsContext } from "../SettingsContext"
@@ -20,6 +19,7 @@ export const Beat = ({
     vibePowerShadingColor,
     showVibePath,
     showBeatNumber,
+    useReducedMotion,
 }: Partial<BeatProps> & typeof defaultSettings) => {
     let finalVibeOffset
     if (vibeOffset) {
@@ -44,6 +44,7 @@ export const Beat = ({
                 {tracks[0].map((e) => 
                     <Hit
                         enemy={e}
+                        useReducedMotion={useReducedMotion}
                         offset={e.partialBeatOffset}
                         color={hitSplatColor}
                         vibeColor={hitSplatVibeColor}
@@ -60,6 +61,7 @@ export const Beat = ({
                 {tracks[1].map((e) => 
                     <Hit
                         enemy={e}
+                        useReducedMotion={useReducedMotion}
                         offset={e.partialBeatOffset}
                         color={hitSplatColor}
                         vibeColor={hitSplatVibeColor}
@@ -76,6 +78,7 @@ export const Beat = ({
                 {tracks[2].map((e) => 
                     <Hit
                         enemy={e}
+                        useReducedMotion={useReducedMotion}
                         offset={e.partialBeatOffset}
                         color={hitSplatColor}
                         vibeColor={hitSplatVibeColor}
@@ -106,12 +109,17 @@ export const TrackDisplay = ({
 
     const { options } = useContext(SettingsContext)
 
+    const [data, setData] = useState<BeatProps[] | undefined>()
 
-    const processedTrackData3 = useMemo(() => processTrackData3(hitmapData, vibeData), [hitmapData, vibeData])
+    useEffect(() => {
+        (async () => setData(processTrackData3(hitmapData, vibeData)))()
+    }, [hitmapData, vibeData])
+
+    const direction = "row"
 
     return (
         <Group gap={0} className={classes.content}>
-            {processedTrackData3?.map((beat, i) =>
+            {data?.map((beat, i) =>
                 <Beat
                     key={i}
                     {...beat}

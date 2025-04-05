@@ -73,7 +73,6 @@ export const Hit = ({
         const left = enemy.left ?? `-${size/2}px`
         // const bottom = enemy.bottom
         const styles = {...hitStyles, left, transform: translate(size)}
-        console.log(useReducedMotion)
         return <img
             data-reduced-motion={useReducedMotion}
             data-vibe={enemy.isVibePhraseEnemy}

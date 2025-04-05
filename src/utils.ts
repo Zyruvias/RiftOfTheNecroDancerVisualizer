@@ -25,11 +25,9 @@ const generateBeat = ({ startBeat, ...rest }): Partial<Beat> => {
 }
 
 export const processTrackData3 = (hitmapData, vibeData) => {
-    console.log("process track data 3")
     if (!hitmapData || !vibeData) {
         return
     }
-    // console.log(trackData, beatMapData, vibePowerData)
 
 
     let currentVibeIndex = 0
@@ -46,8 +44,7 @@ export const processTrackData3 = (hitmapData, vibeData) => {
             continue
         }
         if (!["HitEnemy","WyrmSection"].includes(event.Event) ) {
-            // console.log(event)
-            continue // TODO: figure this out
+            continue
         }
         /* 
             "GUID": "6a4e7c74-ebf8-4a39-a65d-045b3e86aebb",
@@ -74,6 +71,7 @@ export const processTrackData3 = (hitmapData, vibeData) => {
             Facing: facingDirection,
             Health: health,
             Vibe,
+            Event: eventName
         } = event
 
         // conver to bool
@@ -127,14 +125,16 @@ export const processTrackData3 = (hitmapData, vibeData) => {
             // enemy.left = 20
             enemy.transform = "rotate(90deg)"
         }
-        if (event.Event === "WyrmSection") {
+        if (eventName === "WyrmSection") {
             enemy.image = enemyData[8079].image
             enemy.height = 50
             enemy.left = "-50%"
             enemy.zIndex = 1.5
         }
         currentBeat.tracks[x]?.push({ ... enemy})
-        monsterHitCount += 1
+        if (eventName === "HitEnemy") {
+            monsterHitCount += 1
+        }
         // post-hit processing, denote end of vibe path
         if (monsterHitCount === currentVibe.combo + currentVibe.enemies) {
             currentBeat.vibeDurationType = "END"

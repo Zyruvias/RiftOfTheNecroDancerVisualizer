@@ -1,33 +1,10 @@
-import React, { useContext, useMemo } from "react"
-import { Button, Group, Collapse, Box, Stack, AccordionChevron, Code, Center } from '@mantine/core';
-import { processTrackData2 } from "../utils"
-import { useDisclosure } from '@mantine/hooks'
+import React, { useContext, useEffect, useMemo, useState } from "react"
+import { Group, Stack, AccordionChevron, Code, Center, Flex } from '@mantine/core';
+import { processTrackData3 } from "../utils"
 import classes from "./TrackDisplay.module.css"
 import type { Beat as BeatProps } from "../utils"
 import { defaultSettings, SettingsContext } from "../SettingsContext"
 import { Hit } from "./Hit";
-
-
-const Expand = ({ children, title, boxStyle }) => {
-  const [opened, { toggle }] = useDisclosure(false)
-
-  return (
-    <Box mx="auto" m={50}>
-      <Group justify="center" mb={5} p={5}>
-        <Button
-            onClick={toggle}
-            rightSection={<AccordionChevron/>}
-        >
-            {title}
-        </Button>
-      </Group>
-
-      <Collapse in={opened} style={boxStyle}>
-        {children}
-      </Collapse>
-    </Box>
-  );
-}
 
 export const Beat = ({
     startBeat,
@@ -42,6 +19,7 @@ export const Beat = ({
     vibePowerShadingColor,
     showVibePath,
     showBeatNumber,
+    useReducedMotion,
 }: Partial<BeatProps> & typeof defaultSettings) => {
     let finalVibeOffset
     if (vibeOffset) {
@@ -66,6 +44,7 @@ export const Beat = ({
                 {tracks[0].map((e) => 
                     <Hit
                         enemy={e}
+                        useReducedMotion={useReducedMotion}
                         offset={e.partialBeatOffset}
                         color={hitSplatColor}
                         vibeColor={hitSplatVibeColor}
@@ -82,6 +61,7 @@ export const Beat = ({
                 {tracks[1].map((e) => 
                     <Hit
                         enemy={e}
+                        useReducedMotion={useReducedMotion}
                         offset={e.partialBeatOffset}
                         color={hitSplatColor}
                         vibeColor={hitSplatVibeColor}
@@ -98,6 +78,7 @@ export const Beat = ({
                 {tracks[2].map((e) => 
                     <Hit
                         enemy={e}
+                        useReducedMotion={useReducedMotion}
                         offset={e.partialBeatOffset}
                         color={hitSplatColor}
                         vibeColor={hitSplatVibeColor}
@@ -122,40 +103,29 @@ export const Beat = ({
 
 export const TrackDisplay = ({
     trackData,
-    beatData,
-    vibeData
+    vibeData,
+    hitmapData
 }) => {
 
-    const { options, setOptions } = useContext(SettingsContext)
+    const { options } = useContext(SettingsContext)
 
+    const [data, setData] = useState<BeatProps[] | undefined>()
 
-    const processedTrackData2 = useMemo(() => processTrackData2(trackData, beatData, vibeData), [trackData, beatData, vibeData])
+    useEffect(() => {
+        (async () => setData(processTrackData3(hitmapData, vibeData)))()
+    }, [hitmapData, vibeData])
+
+    const direction = "row"
 
     return (
-        <>
-            {/* <Expand title={"Processed Track Data"}> */}
-                <Group gap={0} className={classes.content}>
-                    {processedTrackData2?.map((beat, i) =>
-                        <Beat
-                            key={i}
-                            {...beat}
-                            {...options}
-                        />
-                    )}
-                </Group>
-            {/* </Expand> */}
-            <Expand title={"Track Data (original"}>
-                <Center>
-                    <Group align="top" mah={"40hv"} preventGrowOverflow>
-                        <Code block>
-                            {beatData}
-                        </Code>
-                        <Code block>
-                            {JSON.stringify(trackData, null, 2)}
-                        </Code>
-                    </Group>
-                </Center>
-            </Expand>
-        </>
+        <Group gap={0} className={classes.content}>
+            {data?.map((beat, i) =>
+                <Beat
+                    key={i}
+                    {...beat}
+                    {...options}
+                />
+            )}
+        </Group>
     )
 }

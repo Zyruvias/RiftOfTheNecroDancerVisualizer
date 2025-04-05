@@ -1,0 +1,26 @@
+@keyframes vibe {
+    from {
+        background-position-x: -200%;
+        /* transform: rotate(-15deg); */
+    }
+    to {
+        background-position-x: 200%;
+        /* transform: rotate(15deg) */
+    }
+}
+.hit:hover {
+    background-color: yellowgreen;
+    border: 1px solid yellowgreen;
+}
+.hit[data-vibe=true] {
+    background: linear-gradient(-45deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 0, 0.75) 50%,
+    rgba(255, 255, 255, 0) 60%);
+    background-size: 300%;
+    background-repeat: no-repeat;
+    animation: vibe 1.5s infinite linear alternate;
+}
+.hit[data-reduced-motion=true] {
+    animation-duration: 0s;
+}

@@ -1,12 +1,73 @@
 import { useQuery } from "@tanstack/react-query"
-
+// this points to a copy that imports the sheet and flattens headers
 const SHEET_ID = "1-bOc-4td8X17ZW-5FdDVhQmCirQDIToFuaPfWadXA9Q"
-const SHEET_NAME = "Sheet1" // fragile?
+const SHEET_NAME = "Sheet1"
+
+import { tracks } from "./data/TrackList.json"
+
+export const TRACK_LIST = tracks
+const CURRENT_DATA_VERSION = "v1.2.4"
+
+// TODO: track files should just be renamed but I got lazy
+export const getTrack = async (track, difficulty) => {
+    try {
+        return await import(`./data/Charts/${difficulty.label}-RhythmRift_${track.value}_${difficulty.value}.json`)
+    } catch (e) {
+        console.warn(e)
+        return await import(`./data/Charts/${difficulty.label}-RhythmRift_${track.value}_${difficulty.value}_DoubleSpeed.json`)
+    }
+}
+
+const diffMap = {
+    "Easy": 1,
+    "Medium": 2,
+    "Hard": 3,
+    "Impossible": 4,
+}
+
+const getTrackData = async (track, difficulty) => {
+    return await import(`./data/HitMapsV2/${track.hitMap}-${diffMap[difficulty.value]}.json`)
+}
+
+const BASE_URL = "https://raw.githubusercontent.com/KayDeeTee/RotN-Hitmapper"
+
+const getTrackData2 = async (track, difficulty) => {
+    const response = await fetch(
+        `${BASE_URL}/refs/tags/${CURRENT_DATA_VERSION}/Charts/${track.hitMap}-${diffMap[difficulty.value]}.json`)
+    const json = await response.json()
+    console.log(json)
+    return json
+}
+
+export const albumImageURL = (song) =>  `${BASE_URL}/refs/tags/${CURRENT_DATA_VERSION}/AlbumArts/${song}`
+
+
+export const useTrackData = (track, difficulty) =>
+    useQuery({
+        queryKey: [track.value, difficulty],
+        staleTime: Infinity,
+        queryFn: () => getTrackData2(track, difficulty)
+    })
+
+export const getTrackBeatMap = async (track, difficulty) => {
+    const beatmapName = track.value.replace(/'|_|\s+/g, "")
+    
+    try {
+        const data =  await fetch(`data/HitMaps/all_${difficulty.label.toLowerCase()}/RR${beatmapName}.txt?url`)
+        return await data.text()
+    } catch (e) {
+        console.error(track, difficulty, e)
+    }
+}
 
 const getVibePowerValues = async () => {
     try {
         const result = await fetch(`https://opensheet.elk.sh/${SHEET_ID}/${SHEET_NAME}`)
         const res = await result.json()
+        if (res.error) {
+            console.warn(res.error)
+            return []
+        }
         return res
     } catch (e) {
         console.error(e)

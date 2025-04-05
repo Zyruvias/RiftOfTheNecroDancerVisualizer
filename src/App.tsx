@@ -2,22 +2,31 @@ import React, { useEffect, useState } from "react";
 import { Anchor, AppShell, Burger, Button, Center, Group, Select, Stack, Title, Tooltip } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { TrackDisplay } from "./Components/TrackDisplay";
-import { getVibePathForTrackAndDifficulty, useVibePowerPaths } from "./queries";
+import {
+  TRACK_LIST,
+  getTrack,
+  getTrackBeatMap,
+  getVibePathForTrackAndDifficulty,
+  useTrackData,
+  useVibePowerPaths
+} from "./queries";
 import { Credits } from "./Components/Credits";
 import { Changelog } from "./Components/Changelog";
-import { TRACK_LIST, getTrack, getTrackBeatMap } from "./data";
 import { SongDisplay } from "./Components/SongDisplay";
 import { useDisclosure, useLocalStorage } from "@mantine/hooks";
 import { defaultSettings, SettingsContext } from "./SettingsContext";
 import { Settings } from "./Components/Settings";
+import { PortalTooltip } from "./Components/PortalTooltip";
 
 
 const DIFFICULTIES = [
   { value: "Easy", label: "Easy" },
   { value: "Medium", label: "Medium" },
   { value: "Hard", label: "Hard" },
-  { value: "Expert", label: "Impossible" },
+  { value: "Impossible", label: "Impossible" },
 ];
+
+// const useStateAndLocalStorage = ({ key, defaultValue })
 
 function App() {
   const [track, setTrack] = useLocalStorage({
@@ -33,18 +42,17 @@ function App() {
     defaultValue: defaultSettings
   })
   const [trackData, setTrackData] = useState(null);
-  const [beatData, setBeatData] = useState(null);
 
   const [navbarOpen, { toggle }] = useDisclosure(true)
   useEffect(() => {
     const fetchData = async () => {
       const data = await getTrack(track, difficulty);
-      const beatData = await getTrackBeatMap(track, difficulty);
-      setBeatData(beatData);
       setTrackData(data);
     };
     fetchData();
   }, [track, difficulty]);
+
+  const newTrackData = useTrackData(track, difficulty)
 
   const vibePowerQuery = useVibePowerPaths();
 
@@ -67,9 +75,11 @@ function App() {
     }
     setDifficulty(option);
   };
+
   return (
     <>
       <SettingsContext.Provider value={{ options, setOptions }}>
+      <PortalTooltip>
         <AppShell
           header={{ height: 48 }}
           navbar={{
@@ -133,12 +143,13 @@ function App() {
               />
             </Center>
             <TrackDisplay
+              hitmapData={newTrackData.data}
               trackData={trackData}
-              beatData={beatData}
               vibeData={vibePowerDataForTrack}
             />
           </AppShell.Main>
         </AppShell>
+        </PortalTooltip>
       </SettingsContext.Provider>
     </>
   );

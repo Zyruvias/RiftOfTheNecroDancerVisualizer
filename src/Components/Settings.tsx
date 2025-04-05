@@ -55,6 +55,11 @@ export const Settings = ({}) => {
                     onChange={(event) => setOptionProperty("showBeatNumber", event.target.checked)}
                     checked={tempSettings.showBeatNumber}
                 />
+                {/* <Checkbox
+                    label={"Use Reduced Motion for Vibe Phrase Enemies"}
+                    onChange={(event) => setOptionProperty("useReducedMotion", event.target.checked)}
+                    checked={tempSettings.useReducedMotion}
+                /> */}
                 <Input.Wrapper
                     label="Hit Size"
                     description={"Used when \"Show Enemy Images\" is disabled"}>

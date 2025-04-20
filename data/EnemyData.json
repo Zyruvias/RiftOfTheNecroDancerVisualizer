@@ -97,17 +97,17 @@
     "929": {
         "name": "Blademaster",
         "id": 929,
-        "image": "./data/Enemies/RedBladeMaster/base.png"
+        "image": "./data/Enemies/RedBlademaster/base.png"
     },
     "3685": {
         "name": "BlueBlademaster",
         "id": 3685,
-        "image": "./data/Enemies/BlueBladeMaster/base.png"
+        "image": "./data/Enemies/BlueBlademaster/base.png"
     },
     "7288": {
         "name": "YellowBlademaster",
         "id": 7288,
-        "image": "./data/Enemies/YellowBladeMaster/base.png"
+        "image": "./data/Enemies/YellowBlademaster/base.png"
     },
     "4601": {
         "name": "WhiteSkull",

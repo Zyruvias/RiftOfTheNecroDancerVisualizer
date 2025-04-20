@@ -39,7 +39,7 @@ export const Hit = ({
                         <Text>{trackIndexToText[enemy.x]} Track</Text>
                         <Text>Beat - {enemyBeat}</Text>
                         <Text>Health - {enemy.health} / {enemy.maxHealth}</Text>
-                        {enemy.isVibePhraseEnemyk &&
+                        {enemy.isVibePhraseEnemy &&
                             <Text>Active Vibe Phrase</Text>
                         }
                     </Stack>

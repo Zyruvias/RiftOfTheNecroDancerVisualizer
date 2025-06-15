@@ -1,5 +1,15 @@
+# Contributing to song data
+* Have [BepInEx](https://github.com/BepInEx/BepInEx) installed
+* Download the [hitmapper](https://github.com/KayDeeTee/RotN-Hitmapper) and follow the instructions to setup the mod.
+* At the time of writing, the hitmapper will hang indefinitely due to an unknown bug, and the game must be restarted after each use.
+* With Golden Lute mode on, play all four difficulties of a song, and the data should appear in the `hitmapper` RawCharts subfolder.
+* Submit a pull request to either [KayDeeTee's repository](https://github.com/KayDeeTee/RotN-Hitmapper) with the song data, and create an issue for this repository, OR update the `trackList.json` file in this repository to point to the new data to fetch dynamically.
+* Once the pull request is approved and merged, the song will appear in the next published version of the website.
+
+  
 # Installation and Use
 If you want to simply use this site, visit [the hosted page for the repository here](https://zyruvias.github.io/RiftOfTheNecroDancerVisualizer/). Then see the `Detailed Use` section below.
+
 
 ## Local installation and running
 To install locally for contributing to development or other uses, ensure you have the latest version of node installed.
